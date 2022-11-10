@@ -9,4 +9,5 @@
 
 ![Image](https://user-images.githubusercontent.com/107156341/200996430-aaaacaa7-64b2-47b2-af03-155a113e2284.png)
 
-
+## Git-A-Gig ERD 
+<img src="https://user-images.githubusercontent.com/107156341/200996962-b92d0aa9-dd73-455d-a281-36e20a147ae9.png" width=50% height=50%>
