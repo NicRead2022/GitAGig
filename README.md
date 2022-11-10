@@ -12,7 +12,7 @@
 ![Image](https://user-images.githubusercontent.com/107156341/200996430-aaaacaa7-64b2-47b2-af03-155a113e2284.png)
 
 ## Git-A-Gig ERD 
-<img src="https://user-images.githubusercontent.com/107156341/200996962-b92d0aa9-dd73-455d-a281-36e20a147ae9.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/107156341/200999247-82fd6c16-5fae-45b0-8df1-d686fa572186.png" width=50% height=50%>
 
 ## Component Hierarchy Diagram
 <img src="https://user-images.githubusercontent.com/107156341/200997726-2cfe02f4-ebac-4356-b666-22efd7030b3d.png" width=50% height=50%>
