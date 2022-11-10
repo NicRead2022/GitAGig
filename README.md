@@ -11,3 +11,6 @@
 
 ## Git-A-Gig ERD 
 <img src="https://user-images.githubusercontent.com/107156341/200996962-b92d0aa9-dd73-455d-a281-36e20a147ae9.png" width=50% height=50%>
+
+## Component Hierarchy Diagram
+<img src="https://user-images.githubusercontent.com/16319829/81180309-2b51f000-8fee-11ea-8a78-ddfe8c3412a7.png" width=50% height=50%>
