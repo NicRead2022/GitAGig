@@ -7,6 +7,6 @@
 ## Description: An app where you can come to hire musicians for a gig. Did you have a band member call out sick and need a last minute replacement? Did your drummer decide he didn't like your set list and dip? Did you just get booked to be the opening act for Bad Bunny and you need to double your band size? This is your one stop shop where you can come to find any musician for hire to fit your bands needs. Are you a retired
 
 
-![Image](https://files.slack.com/files-pri/T0351JZQ0-F049VGWAEK1/theband2.png)
+![Image](https://user-images.githubusercontent.com/107156341/200996430-aaaacaa7-64b2-47b2-af03-155a113e2284.png)
 
-![alt text](https://files.slack.com/files-pri/T0351JZQ0-F049VGWAEK1/theband2.png)
+
