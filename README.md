@@ -5,6 +5,7 @@
 
 ***
 [Trello Board](https://trello.com/invite/b/gZaHXww6/ATTI32ff4fa0ffa2fd95c4ae6a8269b34d00026D7D25/git-a-gig-pern-app)
+[Google Slide Presentation](https://docs.google.com/presentation/d/120T29Fd3J7_0IsQvTcP0-D6LQryP7_WMqAjz56KhhiU/edit?usp=sharing)
 ***
 ## Description: Are you looking to hie a musician? Are you a musician wanting to advertise yourself for hire?. Do these scenerios cause you to be triggered? Did you have a band member call out sick and need a last minute replacement? Did your drummer decide he didn't like your set list and dip? Did you just get booked to be the opening act for Bad Bunny and you need to double your band size? This is your one stop shop where you can come to find any musician for hire to fit your bands needs. Are you a retired triangle tapper looking to dust off the old chops? This app is what you need to fill band vacancies and book gigs!
 
