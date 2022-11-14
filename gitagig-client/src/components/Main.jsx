@@ -9,7 +9,7 @@ import Musicians  from './Musicians'
 import Register from './Register'
 
 
-const Main = ({toggleAuthenticated,authenticated, user, setUser}) => {
+const Main = ({toggleAuthenticated,authenticated, bandleader, setBandleader}) => {
 
 
   return (
@@ -19,10 +19,10 @@ const Main = ({toggleAuthenticated,authenticated, user, setUser}) => {
               element={<Login
                 toggleAuthenticated={toggleAuthenticated} 
                 authenticated={authenticated} 
-                user={user} 
-                setUser={setUser}/>}>        
+                bandleader={bandleader}
+                setBandleader={setBandleader}/>}>        
         </Route>
-        <Route path="/bandleader/:Id"element={<BandleaderHome/>}></Route>
+        <Route path="/bandleader"element={<BandleaderHome bandleader={bandleader} authenticated={authenticated}/>}> </Route>
         <Route path="/newgig"  element={<NewGig/>}> </Route>
         <Route path="/musicians" element={<Musicians/>}></Route>
         <Route path="/register" element={<Register/>}></Route>

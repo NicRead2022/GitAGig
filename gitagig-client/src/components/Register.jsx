@@ -68,7 +68,7 @@ const Register = () => {
              onChange={handleChange}
              name="socials"
              type="text"
-             value={formState.socials} required
+             value={formState.socials}
             //  this should be locations for multiple different URLs? 
           />
         </div>

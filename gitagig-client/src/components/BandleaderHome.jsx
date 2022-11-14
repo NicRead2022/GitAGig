@@ -4,15 +4,16 @@ import axios from 'axios'
 
 import React from 'react'
 
-const BandleaderHome = () => {
+const BandleaderHome = ({bandleader}) => {
 const navigate = useNavigate()
-const initialState = {}
-const [bandleader, setBandleader] = useState(initialState)
-let { Id } = useParams()
+// const initialState = {}
+const [bandleaderDetails, setBandleaderDetails] = useState()
+let Id  = bandleader.id
+console.log(Id)
 
 const getDetails = async () => {
-  const response = await axios.get(`api/bandleaders/${Id}`) 
-  setBandleader(response.data)
+  const response = await axios.get(`http://localhost:3001/api/bandleader/${Id}`) 
+  setBandleaderDetails(response.data)
 }
 
 useEffect(() => {
@@ -22,8 +23,8 @@ useEffect(() => {
   return (
     <div className="bandleader-land">
       <div className="bandleader-info">
-        <h2>Welcome {bandleader?.name}</h2>
-        <img src={bandleader?.image}></img>
+        <h2>Welcome {bandleaderDetails?.name}</h2>
+        <img src={bandleaderDetails?.image}></img>
         <h5>Name</h5>
         <h5>Bandname:</h5>
         <h5>Social Media</h5>
