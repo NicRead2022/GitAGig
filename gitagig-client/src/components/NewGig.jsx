@@ -3,29 +3,20 @@ import axios from 'axios';
 import { useState } from 'react';
 
 function NewGig() {
+const initialState = {name: "", location: "",}
+const [formState, setFormState] = useState(initialState)
 
-  const [name, setName] = useState("")
 
-  const [location, setLocation] = useState("")
-
-  // const [bandleaderId, setbandleaderId] = useState("")
-
-  const handleNameChange = event => {
-    setName(event.target.value);
+  const handleChange = (e) => {
+    setFormState({ ...formState, [e.target.name]: e.target.value })
   }
-  const handleLocationChange = event => {
-    setLocation(event.target.value);
-  }
-  // const handleBandleaderId = event => {
-  //   setBandleaderId(event.target.value);
-  // }
 
-  const handleSubmit = event => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    await
     const post = {
-      name: name,
-      location: location,
-      // bandleaderId: bandleaderId,
+      name: formState.name,
+      location: formState.location,
     }
     console.log(post)
     axios.post(
@@ -40,23 +31,14 @@ function NewGig() {
     <form onSubmit={handleSubmit}>
       <label>
         Post Gig:
-        <input type="text" name="name" onChange={handleNameChange} />
-        <input type="text" name="location" onChange={handleLocationChange} />
-        {/* <input type="text" name="bandleaderId" onChange={handleBandleaderId} /> */}
+        <input type="text" name="name" onChange={handleChange} />
+        <input type="text" name="location" onChange={handleChange} />
       </label>
       <button type="submit">Add Gig</button>
     </form>
   </div>
   )}
 
-
-
-
-
-
-
- 
- 
 
 export default NewGig
 
