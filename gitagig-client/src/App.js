@@ -14,7 +14,7 @@ function App() {
         <Header authenticated={authenticated} user={user}/>
       </header>
         <main>
-          <Main toggleAuthenticated={toggleAuthenticated} authenticated={authenticated} user={user} setUser={setUser}/>
+          <Main toggleAuthenticated={toggleAuthenticated} authenticated={authenticated} bandleader={user} setBandleader={setUser}/>
         </main>
     </div>
   );

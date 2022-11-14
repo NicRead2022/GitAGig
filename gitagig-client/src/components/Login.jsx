@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { LoginUser } from '../services/Auth'
 
-const SignIn = ({toggleAuthenticated, setUser}) => {
+const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
   const navigate = useNavigate()
   const [formValues, setFormValues] = useState({ email: '', password: '' })
 
@@ -14,10 +14,11 @@ const SignIn = ({toggleAuthenticated, setUser}) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const payload = await LoginUser(formValues)
+    console.log(payload)
     setFormValues({ email: '', password: '' })
-    setUser(payload)
+    setBandleader(payload)
     toggleAuthenticated(true)
-    navigate('/bandleader/:Id')
+    navigate(`/bandleader`)
   }
 
   return (

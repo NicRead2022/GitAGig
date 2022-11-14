@@ -1,8 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function NewGig() {
+const navigate = useNavigate()
 const initialState = {name: "", location: "",}
 const [formState, setFormState] = useState(initialState)
 
@@ -11,19 +13,18 @@ const [formState, setFormState] = useState(initialState)
     setFormState({ ...formState, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    await
-    const post = {
-      name: formState.name,
-      location: formState.location,
-    }
-    console.log(post)
-    axios.post(
-      `http://localhost:3001/api/gig`, post)
-      .then(res => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();  
+    let post = await axios.post(
+      `http://localhost:3001/api/gig`, formState)
+      .then((res) => {
         console.log(res);
         console.log(res.data);
+        setFormState(initialState)
+        navigate('/bandleader/:Id')
+      })
+      .catch((error) => {
+        console.log(error)
       })
   }
   return (
