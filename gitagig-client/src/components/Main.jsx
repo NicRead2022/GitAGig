@@ -13,7 +13,7 @@ const Main = ({toggleAuthenticated,authenticated, user, setUser}) => {
 
 
   return (
-    <div classname="main">
+    <div className="main">
       <Routes>
         <Route path="/" 
               element={<Login
