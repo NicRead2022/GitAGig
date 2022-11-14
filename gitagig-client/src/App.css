@@ -1,4 +1,9 @@
 .App {
   text-align: center;
+  font-family: "Lexend Zetta";
+}
+
+.nav-div {
+  border-bottom: 2px solid black;
 }
 
