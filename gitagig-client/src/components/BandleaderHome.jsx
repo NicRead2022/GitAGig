@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Client from '../services/api'
 
 import React from 'react'
 
@@ -12,26 +13,27 @@ let Id  = bandleader.id
 console.log(Id)
 
 const getDetails = async () => {
-  const response = await axios.get(`http://localhost:3001/api/bandleader/${Id}`) 
-  setBandleaderDetails(response.data)
+  const response = await Client.get(`/api/bandleader/${Id}`) 
+  setBandleaderDetails(response.data[0])
+  console.log(response.data[0])
 }
 
 useEffect(() => {
   getDetails()
-})
+}, [])
 
   return (
     <div className="bandleader-land">
       <div className="bandleader-info">
         <h2>Welcome {bandleaderDetails?.name}</h2>
-        <img src={bandleaderDetails?.image}></img>
+        <img src={bandleaderDetails?.blImage}></img>
         <h5>Name</h5>
         <h5>Bandname:</h5>
         <h5>Social Media</h5>
           <div className="gig-list">
           <h4>Your Upcoming Gigs:</h4>
           </div>
-        <button onClick={navigate('/newgig')}>Create New Gig</button>
+        <Link to="/new-gig"><button> Create New Gig</button></Link>
       </div>
     </div>
   )

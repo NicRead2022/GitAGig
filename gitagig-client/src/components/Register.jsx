@@ -9,7 +9,7 @@ import { RegisterUser } from '../services/Auth'
 
 const Register = () => {
   const navigate = useNavigate()
-  const initialState = { name: "", band: "", socials: "", image: "", email: "", password:"", confirmPassword:"" }
+  const initialState = { name: "", band: "", socialMedia: "", blImage: "", email: "", password:"", confirmPassword:"" }
   const [formState, setFormState] = useState(initialState)
 
   const handleSubmit = async (e) => {
@@ -17,7 +17,10 @@ const Register = () => {
     await RegisterUser({
       name: formState.name,
       email: formState.email,
-      password: formState.password
+      password: formState.password,
+      band: formState.band,
+      socialMedia: formState.socialMedia,
+      blImage: formState.blImage
     });
     setFormState(initialState);
     navigate('/')
@@ -63,22 +66,22 @@ const Register = () => {
           />
         </div>
         <div className='registrationInputWrapper'>
-          <label htmlFor='socials'>socials:</label>
+          <label htmlFor='socialMedia'>socials:</label>
           <input
              onChange={handleChange}
-             name="socials"
+             name="socialMedia"
              type="text"
-             value={formState.socials}
+             value={formState.socialMedia}
             //  this should be locations for multiple different URLs? 
           />
         </div>
         <div className='registrationInputWrapper'>
-          <label htmlFor='image'>image:</label>
+          <label htmlFor='blImage'>image:</label>
           <input
              onChange={handleChange}
-             name="image"
+             name="blImage"
              type="text"
-             value={formState.image} required
+             value={formState.blImage} required
           />
         </div>
         <div className='registrationInputWrapper'>
