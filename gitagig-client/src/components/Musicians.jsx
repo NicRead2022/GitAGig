@@ -23,7 +23,9 @@ const Musicians = () => {
     getMusicians()
   }, [])
 
-
+const handleClick = (e) => {
+  navigate ('/bandleader')
+}
 
 
   const handleChange = (e) => {
@@ -53,7 +55,7 @@ const Musicians = () => {
     <div>
       <div className='getMusicians'>
         {musicians && (musicians.map(musician => (
-          <div className='musicians' key={musician.id}><h5>Musician: {musician.name}</h5></div>
+          <div className='musicians' key={musician.id}><h5>Musician: {musician.name}</h5><button onClick={handleClick}>Add Musician</button></div>
         )))}
       </div>
           {/* <h3>Add Musician:</h3>
