@@ -6,9 +6,8 @@ import React from 'react'
 
 const BandleaderHome = ({bandleader}) => {
 const navigate = useNavigate()
-// const initialState = {}
 const [bandleaderDetails, setBandleaderDetails] = useState()
-const [bandleaderGigs, setBandleaderGigs] = useState(null)
+const [bandleaderGigs, setBandleaderGigs] = useState([])
 let Id  = bandleader.id
 let result 
 
@@ -25,27 +24,32 @@ const getDetails = async () => {
   setBandleaderGigs(bandGigs)
 }
 
-
-
-
 useEffect(() => {
   getDetails()
 }, [])
 
 // let bandleaderInfo = {}
 
-useEffect(() => {
-  bandleaderGigs ? console.log('this is weird')
-  : console.log('right?')
-  //   bandleaderGigs.map((gig,index) => {
-  //   <div className="gig-card" key={gig.id}>
-  //     <h1>THIS IS A GIG</h1>
-  //   <h4 className="gig-list-title">{gig.venueName}</h4>
-  //   <div className="gig-list-details">{gig.gigType}</div>
-  //   </div>
-  // })) 
-  console.log(bandleaderGigs)
-  }, [bandleaderDetails])
+// useEffect(() => {
+//   bandleaderGigs ? console.log('this is weird')
+//   : console.log('right?')
+//   //   bandleaderGigs.map((gig,index) => {
+//   //   <div className="gig-card" key={gig.id}>
+//   //     <h1>THIS IS A GIG</h1>
+//   //   <h4 className="gig-list-title">{gig.venueName}</h4>
+//   //   <div className="gig-list-details">{gig.gigType}</div>
+//   //   </div>
+//   // })) 
+//   console.log(bandleaderGigs)
+//   }, [bandleaderDetails])
+
+  const gigs =  bandleaderGigs.map((gig,index) => (
+      <div className="gig-card" key={gig.id}>
+        <h1>THIS IS A GIG</h1>
+      <h4 className="gig-list-title">{gig.venueName}</h4>
+      <div className="gig-list-details">{gig.gigType}</div>
+      </div>
+  ))
 
 console.log(bandleaderGigs)
 
@@ -61,7 +65,13 @@ console.log(bandleaderGigs)
           <h4>Your Upcoming Gigs:</h4>
           <div className="gigs-div">
             {/* <h3>{bandleaderGigs[0]?.id}</h3> */}
-            {result}
+                {bandleaderGigs.map((gig,index) => (
+                  <div className="gig-card" key={gig.id}>
+                  <h1>THIS IS A GIG</h1>
+                <h4 className="gig-list-title">{gig.venueName}</h4>
+                <div className="gig-list-details">{gig.gigType}</div>
+          </div>
+  ))}
           </div>
            <Link to="/new-gig"><button>Create New Gig</button></Link>
           </div>
