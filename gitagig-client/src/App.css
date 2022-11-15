@@ -3,7 +3,14 @@
   font-family: "Lexend Zetta";
 }
 
+.main, .login-page {
+  margin: 0px;
+}
+
 .nav-div {
   border-bottom: 2px solid black;
 }
 
+.front-pic {
+  width: 100vw;
+}

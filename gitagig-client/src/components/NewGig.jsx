@@ -42,7 +42,3 @@ const [formState, setFormState] = useState(initialState)
 
 
 export default NewGig
-
-
-
-// do i need to import <NewGig into Bandleader component?

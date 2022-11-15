@@ -23,7 +23,7 @@ const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
 
   return (
     <div className="login-page">
-      <div>LOGO OR TITLE</div>
+      <div><img className="front-pic" src="https://cathouse.co.uk/wp-content/uploads/2019/05/crowd-bw.jpg"></img></div>
       <div className="login-wrapper">
         <form className="col" onSubmit={handleSubmit}>
           <div className="login-inputs">
