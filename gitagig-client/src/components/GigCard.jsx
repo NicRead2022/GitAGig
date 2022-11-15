@@ -31,7 +31,7 @@ const [musiciansOnGig, setMusiciansOnGig] = useState(null)
           {gigDetails ? <div className="gig-card">
                     <h4 className="gig-list-title">{gigDetails?.venueName}: 1.3.22</h4>
                     <h5>{gigDetails?.location}</h5>
-                    <h6 className="gig-list-details">{gigDetails?s.gigType}</h6>
+                    <h6 className="gig-list-details">{gigDetails?.gigType}</h6>
                     <ul className="musicians-on-gig">Musicians:</ul>
                     {musiciansOnGig.map((musicians, index) => {
                       // <li>{musicians.name}: {musicians.instrument}</li>
