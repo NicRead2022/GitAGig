@@ -1,13 +1,16 @@
 import React from 'react';
+import Client from '../services/api'
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function NewGig() {
-const navigate = useNavigate()
-const initialState = {name: "", location: "",}
-const [formState, setFormState] = useState(initialState)
 
+const NewGig = ({bandleader}) => {
+const navigate = useNavigate()
+const initialState = {venueName: "", location: "", gigType: ""}
+const [formState, setFormState] = useState(initialState)
+let Id = bandleader.id
+console.log(Id)
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value })
@@ -15,26 +18,48 @@ const [formState, setFormState] = useState(initialState)
 
   const handleSubmit = async (e) => {
     e.preventDefault();  
-    let post = await axios.post(
-      `http://localhost:3001/api/gig`, formState)
+    let newGigWithId = {...formState, bandleaderId: Id }
+    await Client.post(`/api/gigs`, newGigWithId)
       .then((res) => {
         console.log(res);
-        console.log(res.data);
         setFormState(initialState)
-        navigate('/bandleader/:Id')
+        navigate('/bandleader')
       })
       .catch((error) => {
         console.log(error)
       })
   }
   return (
-    <div>NewGig
+    <div>
+          <h3>Post New Gig:</h3>
     <form onSubmit={handleSubmit}>
-      <label>
-        Post Gig:
-        <input type="text" name="name" onChange={handleChange} />
-        <input type="text" name="location" onChange={handleChange} />
-      </label>
+    <div className='new-gig-input-wrapper'>
+          <label htmlFor='venueName'>Venue:</label>
+          <input
+             onChange={handleChange}
+             name="venueName"
+             type="text"
+             value={formState.venueName} required
+          />
+        </div>
+        <div className='new-gig-input-wrapper'>
+          <label htmlFor='location'>Location:</label>
+          <input
+             onChange={handleChange}
+             name="location"
+             type="text"
+             value={formState.location} required
+          />
+        </div>
+        <div className='new-gig-input-wrapper'>
+          <label htmlFor='gigType'>Gig Type:</label>
+          <input
+             onChange={handleChange}
+             name="gigType"
+             type="text"
+             value={formState.gigType} required
+          />
+        </div>
       <button type="submit">Add Gig</button>
     </form>
   </div>
@@ -42,3 +67,4 @@ const [formState, setFormState] = useState(initialState)
 
 
 export default NewGig
+

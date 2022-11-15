@@ -23,7 +23,7 @@ const Main = ({toggleAuthenticated,authenticated, bandleader, setBandleader}) =>
                 setBandleader={setBandleader}/>}>        
         </Route>
         <Route path="/bandleader"element={<BandleaderHome bandleader={bandleader} authenticated={authenticated}/>}> </Route>
-        <Route path="/newgig"  element={<NewGig/>}> </Route>
+        <Route path="/new-gig"  element={<NewGig bandleader={bandleader}/>}> </Route>
         <Route path="/musicians" element={<Musicians/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
       </Routes>
