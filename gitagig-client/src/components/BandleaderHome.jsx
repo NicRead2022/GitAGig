@@ -8,42 +8,64 @@ const BandleaderHome = ({bandleader}) => {
 const navigate = useNavigate()
 // const initialState = {}
 const [bandleaderDetails, setBandleaderDetails] = useState()
+const [bandleaderGigs, setBandleaderGigs] = useState(null)
 let Id  = bandleader.id
-console.log(bandleader)
+let result 
+
 
 const getDetails = async () => {
   const response = await Client.get(`/api/bandleader/${Id}`) 
-  setBandleaderDetails(response.data)
   console.log(response.data)
+  setBandleaderDetails(response.data[0])
+  let data = response.data
+  let bandGigs = []
+  data.forEach(element => {
+    bandGigs.push(element.Gigs) 
+  });
+  setBandleaderGigs(bandGigs)
 }
+
+
+
 
 useEffect(() => {
   getDetails()
 }, [])
 
-let bandleaderGigs = []
-let bandleaderInfo = {}
+// let bandleaderInfo = {}
 
 useEffect(() => {
-  bandleaderInfo = bandleaderDetails[0]
-  bandleaderDetails.forEach(element => {
-    bandleaderGigs.push(element.Gigs) 
-  });
-}, [bandleaderDetails])
+  bandleaderGigs ? console.log('this is weird')
+  : console.log('right?')
+  //   bandleaderGigs.map((gig,index) => {
+  //   <div className="gig-card" key={gig.id}>
+  //     <h1>THIS IS A GIG</h1>
+  //   <h4 className="gig-list-title">{gig.venueName}</h4>
+  //   <div className="gig-list-details">{gig.gigType}</div>
+  //   </div>
+  // })) 
+  console.log(bandleaderGigs)
+  }, [bandleaderDetails])
+
+console.log(bandleaderGigs)
 
   return (
     <div className="bandleader-land">
       <div className="bandleader-info">
         <h2>Welcome {bandleader.name}</h2>
-        <img src={bandleaderInfo.blImage}></img>
-        <h5>Name: {bandleaderInfo.name}</h5>
-        <h5>Bandname:{bandleaderInfo.band}</h5>
-        <h5>Social Media: <a href={`https://${bandleaderInfo.socialMedia}`} target="_blank">{bandleaderDetails?.socialMedia}</a></h5>
+        <img src={bandleaderDetails?.blImage}></img>
+        <h5>Name: {bandleaderDetails?.name}</h5>
+        <h5>Bandname:{bandleaderDetails?.band}</h5>
+        <h5>Social Media: <a href={`https://${bandleaderDetails?.socialMedia}`} target="_blank">{bandleaderDetails?.socialMedia}</a></h5>
           <div className="gig-list">
           <h4>Your Upcoming Gigs:</h4>
+          <div className="gigs-div">
+            {/* <h3>{bandleaderGigs[0]?.id}</h3> */}
+            {result}
           </div>
-        <Link to="/new-gig"><button>Create New Gig</button></Link>
-      </div>
+           <Link to="/new-gig"><button>Create New Gig</button></Link>
+          </div>
+    </div>
     </div>
   )
 }
