@@ -4,7 +4,7 @@ import axios from 'axios'
 import Client from '../services/api'
 import React from 'react'
 
-export const GigCard = ({gigId}) => {
+export const GigCard = ({gigId, selectedGig, setSelectedGig}) => {
 const [gigDetails, setGigDetails] = useState(null)
 const [musiciansOnGig, setMusiciansOnGig] = useState(null)
 
@@ -15,7 +15,7 @@ const [musiciansOnGig, setMusiciansOnGig] = useState(null)
     let data = response.data
   let gigMusicians = []
   data.forEach(element => {
-    gigMusicians.push(element.Gigs) 
+    gigMusicians.push(element.Musicians) 
   });
   setMusiciansOnGig(gigMusicians)
   }
@@ -25,19 +25,20 @@ const [musiciansOnGig, setMusiciansOnGig] = useState(null)
   }, [])
 
   // key={gigDetails.id}
-
+console.log(musiciansOnGig)
   return (
     <div>
           {gigDetails ? <div className="gig-card">
-                    <h4 className="gig-list-title">{gigDetails?.venueName}: 1.3.22</h4>
-                    <h5>{gigDetails?.location}</h5>
-                    <h6 className="gig-list-details">{gigDetails?.gigType}</h6>
-                    <ul className="musicians-on-gig">Musicians:</ul>
-                    {musiciansOnGig.map((musicians, index) => {
-                      // <li>{musicians.name}: {musicians.instrument}</li>
-                    })}
-
-                    <Link to="/musicians"><button>Add Musicians</button></Link></div> 
+                    <h5 className="gig-list-title">{gigDetails[0].venueName}: 1.3.22</h5>
+                    <h6>{gigDetails[0].location}</h6>
+                    <h6 className="gig-list-details">{gigDetails[0].gigType}</h6>
+                    <ul className="musicians-on-gig">Musicians:
+                    {musiciansOnGig.map((musicians, index) => (
+                      // <li>{musicians[0]?.name}: {musicians[0]?.instrument}</li>
+                      <li>THIS</li>
+                    ))}
+                    </ul>
+                    <Link to='/musicians'><button onClick={setSelectedGig(gigId)}>Add Musicians</button></Link></div> 
                 : <h5>No Details Available</h5>}
     </div>
   )

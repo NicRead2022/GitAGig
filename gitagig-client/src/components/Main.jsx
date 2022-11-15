@@ -10,7 +10,7 @@ import Register from './Register'
 
 
 const Main = ({toggleAuthenticated,authenticated, bandleader, setBandleader, checkToken}) => {
-
+  const [selectedGig, setSelectedGig] = useState(null)
 
   return (
     <div className="main">
@@ -22,9 +22,9 @@ const Main = ({toggleAuthenticated,authenticated, bandleader, setBandleader, che
                 bandleader={bandleader}
                 setBandleader={setBandleader}/>}>        
         </Route>
-        <Route path="/bandleader"element={<BandleaderHome bandleader={bandleader} checkToken={checkToken}authenticated={authenticated}/>}> </Route>
+        <Route path="/bandleader"element={<BandleaderHome selectedGig={selectedGig} setSelectedGig={setSelectedGig} bandleader={bandleader} checkToken={checkToken}authenticated={authenticated}/>}> </Route>
         <Route path="/new-gig"  element={<NewGig bandleader={bandleader}/>}> </Route>
-        <Route path="/musicians" element={<Musicians/>}></Route>
+        <Route path="/musicians" element={<Musicians selectedGig={selectedGig}/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
       </Routes>
 
