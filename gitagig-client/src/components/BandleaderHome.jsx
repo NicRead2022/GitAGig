@@ -8,7 +8,7 @@ const BandleaderHome = ({bandleader}) => {
 const navigate = useNavigate()
 const [bandleaderDetails, setBandleaderDetails] = useState()
 const [bandleaderGigs, setBandleaderGigs] = useState([])
-let Id  = bandleader.id
+let Id  = bandleader?.id
 let result 
 
 
@@ -56,7 +56,7 @@ console.log(bandleaderGigs)
   return (
     <div className="bandleader-land">
       <div className="bandleader-info">
-        <h2>Welcome {bandleader.name}</h2>
+        <h2>Welcome {bandleaderDetails?.name}</h2>
         <img src={bandleaderDetails?.blImage}></img>
         <h5>Name: {bandleaderDetails?.name}</h5>
         <h5>Bandname:{bandleaderDetails?.band}</h5>

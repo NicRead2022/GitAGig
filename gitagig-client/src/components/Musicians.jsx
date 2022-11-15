@@ -1,40 +1,62 @@
 import React from 'react'
 import Client from '../services/api'
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 
-const Musicians = ({gig}) => {
+const Musicians = () => {
   const navigate = useNavigate()
   const initialState = {name: "", socialMedia: "", genre: "", about:"", image:""}
   const [formState, setFormState] = useState(initialState)
-  let Id = gig.id
+  const [musicians,setMusicians] = useState([])
+  // let Id = gig.id
+  // let { id } = useParams()
+
+  const getMusicians = async () => {
+    const res = await axios.get(`http://localhost:3001/api/musician`)
+    setMusicians(res.data)
+  }
+
+  useEffect(() => {
+    getMusicians()
+  }, [])
+
+
+
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();  
-    let newMusicianWithId = {...formState, gigId: Id }
-    await Client.post(`/api/musician`, newMusicianWithId)
-      .then((res) => {
-        console.log(res);
-        setFormState(initialState)
-        navigate('/bandleader')
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-  }
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();  
+  //   let newMusicianWithId = {...formState, gigId: Id }
+  //   await Client.post(`/api/musician`, newMusicianWithId)
+  //     .then((res) => {
+  //       console.log(res);
+  //       setFormState(initialState)
+  //       navigate('/bandleader')
+  //     })
+  //     .catch((error) => {
+  //       console.log(error)
+  //     })
+  // }
 
 
+// make axios call to get musicians
 
 
 
   return (
     <div>
-          <h3>Add Musician:</h3>
+      <div className='getMusicians'>
+        {musicians && (musicians.map(musician => (
+          <div className='musicians' key={musician.id}><h5>Musician: {musician.name}</h5></div>
+        )))}
+      </div>
+          {/* <h3>Add Musician:</h3>
     <form onSubmit={handleSubmit}>
     <div className='new-musician-input-wrapper'>
           <label htmlFor='name'>Name:</label>
@@ -82,7 +104,7 @@ const Musicians = ({gig}) => {
           />
         </div>
       <button type="submit">Add Musician</button>
-    </form>
+    </form> */}
   </div>
   )
 }

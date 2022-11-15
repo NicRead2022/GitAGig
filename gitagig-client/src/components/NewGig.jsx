@@ -9,8 +9,8 @@ const NewGig = ({bandleader}) => {
 const navigate = useNavigate()
 const initialState = {venueName: "", location: "", gigType: ""}
 const [formState, setFormState] = useState(initialState)
-let Id = bandleader.id
-console.log(Id)
+// let Id = bandleader.id
+console.log(bandleader.id)
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value })
@@ -18,7 +18,7 @@ console.log(Id)
 
   const handleSubmit = async (e) => {
     e.preventDefault();  
-    let newGigWithId = {...formState, bandleaderId: Id }
+    let newGigWithId = {...formState, bandleaderId: bandleader.id }
     await Client.post(`/api/gigs`, newGigWithId)
       .then((res) => {
         console.log(res);
