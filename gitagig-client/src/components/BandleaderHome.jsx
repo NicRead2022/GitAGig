@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Client from '../services/api'
 import React from 'react'
+import { GigCard } from './GigCard'
 
 const BandleaderHome = ({bandleader}) => {
 const navigate = useNavigate()
@@ -28,20 +29,11 @@ useEffect(() => {
   getDetails()
 }, [])
 
-// let bandleaderInfo = {}
 
-// useEffect(() => {
-//   bandleaderGigs ? console.log('this is weird')
-//   : console.log('right?')
-//   //   bandleaderGigs.map((gig,index) => {
-//   //   <div className="gig-card" key={gig.id}>
-//   //     <h1>THIS IS A GIG</h1>
-//   //   <h4 className="gig-list-title">{gig.venueName}</h4>
-//   //   <div className="gig-list-details">{gig.gigType}</div>
-//   //   </div>
-//   // })) 
-//   console.log(bandleaderGigs)
-//   }, [bandleaderDetails])
+
+useEffect(() => {
+
+  }, [bandleaderDetails])
 
   const gigs =  bandleaderGigs.map((gig,index) => (
       <div className="gig-card" key={gig.id}>
@@ -63,19 +55,15 @@ console.log(bandleaderGigs)
         <h5>Social Media: <a href={`https://${bandleaderDetails?.socialMedia}`} target="_blank">{bandleaderDetails?.socialMedia}</a></h5>
           <div className="gig-list">
           <h4>Your Upcoming Gigs:</h4>
-          <div className="gigs-div">
-            {/* <h3>{bandleaderGigs[0]?.id}</h3> */}
+            <div className="gigs-div">            
                 {bandleaderGigs.map((gig,index) => (
-                  <div className="gig-card" key={gig.id}>
-                  <h1>THIS IS A GIG</h1>
-                <h4 className="gig-list-title">{gig.venueName}</h4>
-                <div className="gig-list-details">{gig.gigType}</div>
+                  <div key={gig.id} className="gig-card-wrapper">
+                    <GigCard key={gig.id} gigId={gig.id}/>
+                  </div>
+                 ))}
+            </div>
           </div>
-  ))}
-          </div>
-           <Link to="/new-gig"><button>Create New Gig</button></Link>
-          </div>
-    </div>
+      </div>
     </div>
   )
 }
