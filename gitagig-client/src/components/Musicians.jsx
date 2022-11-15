@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect } from 'react';
+import Main from './Main';
 
 
-const Musicians = () => {
+const Musicians = ({selectedGig}) => {
   const navigate = useNavigate()
   const initialState = {name: "", socialMedia: "", genre: "", about:"", image:""}
   const [formState, setFormState] = useState(initialState)
@@ -19,11 +20,14 @@ const Musicians = () => {
     setMusicians(res.data)
   }
 
+
   useEffect(() => {
     getMusicians()
   }, [])
 
-const handleClick = (e) => {
+const handleClick = async(e) => {
+  let addedGig = {gigId: selectedGig}
+  await axios.put(`http://localhost:3001/api/musician/${musicians.id}`, addedGig )
   navigate ('/bandleader')
 }
 

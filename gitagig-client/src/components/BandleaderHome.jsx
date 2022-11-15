@@ -5,10 +5,11 @@ import Client from '../services/api'
 import React from 'react'
 import { GigCard } from './GigCard'
 
-const BandleaderHome = ({bandleader}) => {
+const BandleaderHome = ({bandleader, selectedGig, setSelectedGig}) => {
 const navigate = useNavigate()
 const [bandleaderDetails, setBandleaderDetails] = useState()
 const [bandleaderGigs, setBandleaderGigs] = useState([])
+
 let Id  = bandleader?.id
 let result 
 
@@ -58,7 +59,7 @@ console.log(bandleaderGigs)
             <div className="gigs-div">            
                 {bandleaderGigs.map((gig,index) => (
                   <div key={gig.id} className="gig-card-wrapper">
-                    <GigCard key={gig.id} gigId={gig.id}/>
+                    <GigCard key={gig.id} gigId={gig.id} selectedGig={selectedGig} setSelectedGig={setSelectedGig}/>
                   </div>
                  ))}
             </div>
