@@ -37,6 +37,12 @@ const handleClick = (e) => {
   navigate('/musicians')
 }
 
+const handleUpdateClick = (e) => {
+  console.log(gigDetails)
+  setSelectedGig(gigDetails)
+  navigate('/update-gig')
+}
+
 
   // key={gigDetails.id}
 console.log(musiciansOnGig)
@@ -46,7 +52,8 @@ console.log(musiciansOnGig)
                     <h5 className="gig-list-title">{gigDetails[0].venueName}: 1.3.22</h5>
                     <h6>{gigDetails[0].location}</h6>
                     <h6 className="gig-list-details">{gigDetails[0].gigType}</h6>
-                    <button className="gigDelete" onClick={() => {deleteGig(gigId)}}>Delete This Shitty Gig Anyway</button>
+                      <button className="gigDelete" onClick={() => {deleteGig(gigId)}}>Delete Gig</button>
+                      <button className="updateGig" onClick={handleUpdateClick}>Update Gig</button>
                     <ul className="musicians-on-gig">Musicians:
                     {musiciansOnGig.map((musicians, idx) => (
                       <li>{musicians.name}: {musicians.genre}</li>
