@@ -33,9 +33,9 @@ console.log(musiciansOnGig)
                     <h6>{gigDetails[0].location}</h6>
                     <h6 className="gig-list-details">{gigDetails[0].gigType}</h6>
                     <ul className="musicians-on-gig">Musicians:
-                    {musiciansOnGig.map((musicians, index) => (
-                      // <li>{musicians[0]?.name}: {musicians[0]?.instrument}</li>
-                      <li>THIS</li>
+                    {musiciansOnGig.map((musicians, idx) => (
+                      <li>{musicians.name}: {musicians.genre}</li>
+                      
                     ))}
                     </ul>
                     <Link to='/musicians'><button onClick={setSelectedGig(gigId)}>Add Musicians</button></Link></div> 
