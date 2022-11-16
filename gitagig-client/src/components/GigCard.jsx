@@ -4,10 +4,11 @@ import axios from 'axios'
 import Client from '../services/api'
 import React from 'react'
 
-export const GigCard = ({gigId, selectedGig, setSelectedGig}) => {
+export const GigCard = ({gigId, selectedGig, setSelectedGig, deletedGig, toggleDeletedGig}) => {
   let navigate = useNavigate()
 const [gigDetails, setGigDetails] = useState(null)
 const [musiciansOnGig, setMusiciansOnGig] = useState(null)
+
 
   const getDetails = async () => {
     const response = await Client.get(`/api/gigs/${gigId}`) 
@@ -19,6 +20,11 @@ const [musiciansOnGig, setMusiciansOnGig] = useState(null)
     gigMusicians.push(element.Musicians) 
   });
   setMusiciansOnGig(gigMusicians)
+  }
+
+  const deleteGig = async () => {
+    await Client.delete(`/api/gigs/${gigId}`)
+    toggleDeletedGig(!deletedGig)
   }
 
   useEffect(() => {
@@ -39,6 +45,7 @@ console.log(musiciansOnGig)
                     <h5 className="gig-list-title">{gigDetails[0].venueName}: 1.3.22</h5>
                     <h6>{gigDetails[0].location}</h6>
                     <h6 className="gig-list-details">{gigDetails[0].gigType}</h6>
+                    <button className="gigDelete" onClick={() => {deleteGig(gigId)}}>Delete This Shitty Gig Anyway</button>
                     <ul className="musicians-on-gig">Musicians:
                     {musiciansOnGig.map((musicians, idx) => (
                       <li>{musicians.name}: {musicians.genre}</li>

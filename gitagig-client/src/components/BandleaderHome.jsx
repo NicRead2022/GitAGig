@@ -9,6 +9,7 @@ const BandleaderHome = ({bandleader, selectedGig, setSelectedGig}) => {
 const navigate = useNavigate()
 const [bandleaderDetails, setBandleaderDetails] = useState()
 const [bandleaderGigs, setBandleaderGigs] = useState([])
+const [deletedGig, toggleDeletedGig] = useState(false) 
 
 let Id  = bandleader?.id
 let result 
@@ -23,26 +24,29 @@ const getDetails = async () => {
   data.forEach(element => {
     bandGigs.push(element.Gigs) 
   });
+  if (!bandGigs[0].id){
+    return null
+  } else
   setBandleaderGigs(bandGigs)
 }
 
 useEffect(() => {
   getDetails()
-}, [])
+}, [deletedGig])
 
 
 
-useEffect(() => {
+// useEffect(() => {
 
-  }, [bandleaderDetails])
+//   }, [bandleaderDetails])
 
-  const gigs =  bandleaderGigs.map((gig,index) => (
-      <div className="gig-card" key={gig.id}>
-        <h1>THIS IS A GIG</h1>
-      <h4 className="gig-list-title">{gig.venueName}</h4>
-      <div className="gig-list-details">{gig.gigType}</div>
-      </div>
-  ))
+  // const gigs =  bandleaderGigs.map((gig,index) => (
+  //     <div className="gig-card" key={gig.id}>
+  //       <h1>THIS IS A GIG</h1>
+  //     <h4 className="gig-list-title">{gig.venueName}</h4>
+  //     <div className="gig-list-details">{gig.gigType}</div>
+  //     </div>
+  // ))
 
 console.log(bandleaderGigs)
 
@@ -57,10 +61,11 @@ console.log(bandleaderGigs)
           <div className="gig-list">
           <Link to='/new-gig'><button>Add Gig</button></Link>
           <h4>Your Upcoming Gigs:</h4>
-            <div className="gigs-div">            
-                {bandleaderGigs.map((gig,index) => (
+            <div className="gigs-div">
+                {!bandleaderGigs ? <h5>No Details Available</h5> :           
+                bandleaderGigs.map((gig,index) => (
                   <div key={gig.id} className="gig-card-wrapper">
-                    <GigCard key={gig.id} gigId={gig.id} selectedGig={selectedGig} setSelectedGig={setSelectedGig}/>
+                    <GigCard key={gig.id} gigId={gig.id} selectedGig={selectedGig} setSelectedGig={setSelectedGig} deletedGig={deletedGig} toggleDeletedGig={toggleDeletedGig}/>
                   </div>
                  ))}
             </div>
