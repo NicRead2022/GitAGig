@@ -1,16 +1,27 @@
 #root {
   height:100vh;
+ 
 }
 
 .App {
   text-align: center;
   font-family: "Lexend Zetta";
   height: 100%; 
+  
 }
 
 .main, .login-page {
   margin: 0px;
   height: calc(100vh - 178px);
+  background-image: url("https://cathouse.co.uk/wp-content/uploads/2019/05/crowd-bw.jpg");
+  flex: 1;
+  display: auto;
+  justify-content:center ;
+  flex-direction: column;
+  background-size: cover;
+  border: 5px solid;
+  color: rgb(20, 18, 3);
+  height: 10
 }
 
 .nav-div {
@@ -19,14 +30,18 @@
 
 .front-pic {
   width: 100vw;
+  
 }
 
 /* Login */
 
+/* .front-pic{
+  
+  } */
 
-.login-page {
-  background-color: silver;
-}
+  /* .login-page {
+    background-image: ("https://cathouse.co.uk/wp-content/uploads/2019/05/crowd-bw.jpg");
+} */
 
 /* //Register */
 
@@ -41,6 +56,8 @@ label,input{
   width:calc(100vw - 200px);
   margin-left: auto;
   margin-right: auto;
+  font-size: larger;
+  font-weight: 700;
 }
 .registrationFormTitle {
   background-color: white;
@@ -79,7 +96,7 @@ label,input{
 /* Header */
 
 .nav-div {
-  background-color: rgb(163, 157, 164);
+  background-color: rgb(251, 248, 252);
   border: 2px solid;
   height:140px;
 }
