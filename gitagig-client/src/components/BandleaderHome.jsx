@@ -62,7 +62,7 @@ console.log(bandleaderGigs)
           <Link to='/new-gig'><button>Add Gig</button></Link>
           <h4>Your Upcoming Gigs:</h4>
             <div className="gigs-div">
-                {!bandleaderGigs ? <h5>No Details Available</h5> :           
+                {!bandleaderGigs ? <h5>No Upcoming Gigs</h5> :           
                 bandleaderGigs.map((gig,index) => (
                   <div key={gig.id} className="gig-card-wrapper">
                     <GigCard key={gig.id} gigId={gig.id} selectedGig={selectedGig} setSelectedGig={setSelectedGig} deletedGig={deletedGig} toggleDeletedGig={toggleDeletedGig} setBandleaderGigs={setBandleaderGigs}/>
