@@ -139,6 +139,10 @@ label,input{
 
 /* BandleaderHome */
 
+.profile-pic {
+  width:calc(50vw - 20px);
+}
+
 .add-gigbtn  {
     appearance: none;
     background-color: #000000;
