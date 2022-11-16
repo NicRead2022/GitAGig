@@ -4,7 +4,7 @@ import axios from 'axios'
 import Client from '../services/api'
 import React from 'react'
 
-export const GigCard = ({gigId, selectedGig, setSelectedGig, deletedGig, toggleDeletedGig}) => {
+export const GigCard = ({gigId, selectedGig, setSelectedGig, deletedGig, toggleDeletedGig, setBandleaderGigs}) => {
   let navigate = useNavigate()
 const [gigDetails, setGigDetails] = useState(null)
 const [musiciansOnGig, setMusiciansOnGig] = useState(null)
@@ -24,6 +24,7 @@ const [musiciansOnGig, setMusiciansOnGig] = useState(null)
 
   const deleteGig = async () => {
     await Client.delete(`/api/gigs/${gigId}`)
+    setBandleaderGigs(null)
     toggleDeletedGig(!deletedGig)
   }
 
