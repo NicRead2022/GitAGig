@@ -35,7 +35,7 @@ const Register = () => {
   return (
     <div className='registrationForm'>
       <h1 className='registrationFormTitle'>Register</h1>
-      <form className='registrationForm' onSubmit={handleSubmit}>
+      <form className='registrationInputContainer' onSubmit={handleSubmit}>
         <div className='registrationInputWrapper'>
           <label htmlFor='name'>Name:</label>
           <input 
@@ -102,7 +102,7 @@ const Register = () => {
              value={formState.confirmPassword} required
           />
         </div>
-        <button
+        <button className='registerButton'
           disabled={
             !formState.email ||
             (!formState.password &&

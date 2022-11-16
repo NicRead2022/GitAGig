@@ -1,16 +1,85 @@
+#root {
+  height:100vh;
+}
+
 .App {
   text-align: center;
   font-family: "Lexend Zetta";
+  height: 100%; 
 }
 
 .main, .login-page {
   margin: 0px;
+  height: calc(100vh - 178px);
 }
 
 .nav-div {
-  border-bottom: 2px solid black;
+  border-bottom: 0px ;
 }
 
 .front-pic {
   width: 100vw;
+}
+
+/* Login */
+
+
+.login-page {
+  background-color: silver;
+}
+
+/* //Register */
+
+.registrationInputWrapper {
+  margin: 2px;
+  
+}
+label,input{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  width:calc(100vw - 200px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.registrationFormTitle {
+  background-color: white;
+}
+.registrationForm {
+  background-image: url(https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJhbmR8ZW58MHx8MHx8&w=1000&q=80);
+  flex: 1;
+  display: flex;
+  justify-content:center ;
+  flex-direction: column;
+  background-size: auto;
+  border: 5px solid;
+  color: rgb(20, 18, 3);
+  height:100%
+}
+
+.registrationInputContainer {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content:center ;
+  flex-direction: column;
+  background-size: auto;
+  border: 5px solid;
+  color: rgb(20, 18, 3);
+  
+}
+.registerButton {
+  width:calc(100vw - 250px);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 8px;
+}
+
+
+/* Header */
+
+.nav-div {
+  background-color: rgb(163, 157, 164);
+  border: 2px solid;
+  height:140px;
 }
