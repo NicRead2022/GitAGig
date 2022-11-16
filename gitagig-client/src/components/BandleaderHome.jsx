@@ -54,7 +54,7 @@ console.log(bandleaderGigs)
     <div className="bandleader-land">
       <div className="bandleader-info">
         <h2>Welcome {bandleaderDetails?.name}</h2>
-        <img src={bandleaderDetails?.blImage}></img>
+        <img className="profile-pic" src={bandleaderDetails?.blImage}></img>
         <h5>Name: {bandleaderDetails?.name}</h5>
         <h5>Bandname:{bandleaderDetails?.band}</h5>
         <h5>Social Media: <a href={`https://${bandleaderDetails?.socialMedia}`} target="_blank">{bandleaderDetails?.socialMedia}</a></h5>
