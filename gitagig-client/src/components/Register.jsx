@@ -37,8 +37,8 @@ const Register = () => {
       <h1 className='registrationFormTitle'>Register</h1>
       <form className='registrationInputContainer' onSubmit={handleSubmit}>
         <div className='registrationInputWrapper'>
-          <label htmlFor='name'>Name:</label>
-          <input 
+          <label className='registration-labels' htmlFor='name'>Name:</label>
+          <input className='registration-inputs'
             onChange={handleChange}
             name="name"
             type="text"
@@ -47,8 +47,8 @@ const Register = () => {
           />
         </div>
         <div className='registrationInputWrapper'>
-          <label htmlFor='email'>Email:</label>
-          <input
+          <label className='registration-labels' htmlFor='email'>Email:</label>
+          <input className='registration-inputs'
              onChange={handleChange}
              name="email"
              type="text"
@@ -57,8 +57,8 @@ const Register = () => {
           />
         </div>
         <div className='registrationInputWrapper'>
-          <label htmlFor='band'>Band:</label>
-          <input
+          <label className='registration-labels' htmlFor='band'>Band:</label>
+          <input className='registration-inputs'
              onChange={handleChange}
              name="band"
              type="text"
@@ -66,8 +66,8 @@ const Register = () => {
           />
         </div>
         <div className='registrationInputWrapper'>
-          <label htmlFor='socialMedia'>socials:</label>
-          <input
+          <label className='registration-labels' htmlFor='socialMedia'>socials:</label>
+          <input className='registration-inputs'
              onChange={handleChange}
              name="socialMedia"
              type="text"
@@ -76,8 +76,8 @@ const Register = () => {
           />
         </div>
         <div className='registrationInputWrapper'>
-          <label htmlFor='blImage'>image:</label>
-          <input
+          <label className='registration-labels' htmlFor='blImage'>image:</label>
+          <input className='registration-inputs'
              onChange={handleChange}
              name="blImage"
              type="text"
@@ -85,8 +85,8 @@ const Register = () => {
           />
         </div>
         <div className='registrationInputWrapper'>
-          <label htmlFor='password'>Password:</label>
-          <input
+          <label className='registration-labels' htmlFor='password'>Password:</label>
+          <input className='registration-inputs'
              onChange={handleChange}
              name="password"
              type="password"
@@ -94,8 +94,8 @@ const Register = () => {
           />
         </div>
         <div className='registrationInputWrapper'>
-          <label htmlFor='confirmPassword'>Confirm Password:</label>
-          <input
+          <label className='registration-labels' htmlFor='confirmPassword'>Confirm Password:</label>
+          <input className='registration-inputs'
              onChange={handleChange}
              name="confirmPassword"
              type="password"
