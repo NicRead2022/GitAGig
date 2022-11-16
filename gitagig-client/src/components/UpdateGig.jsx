@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const UpdateGig = ({selectedGig}) => {
 const navigate = useNavigate()
-const initialState = {venueName: "", location: "", gigType: ""}
+const initialState = {}
 const [formState, setFormState] = useState(initialState)
 // let Id = bandleader.id
 console.log(selectedGig)
@@ -38,7 +38,7 @@ console.log(selectedGig)
           <input
              onChange={handleChange}
              placeholder={selectedGig[0].venueName}
-             defaultValue={selectedGig[0].venueName}
+            //  defaultValue={selectedGig[0].venueName}
              name="venueName"
              type="text"
              value={formState.venueName} 
@@ -49,7 +49,7 @@ console.log(selectedGig)
           <input
              onChange={handleChange}
              placeholder={selectedGig[0].date}
-             defaultValue={selectedGig[0].date}
+            //  defaultValue={selectedGig[0].date}
              name="date"
              type="text"
              value={formState.date} 
@@ -60,7 +60,7 @@ console.log(selectedGig)
           <input
              onChange={handleChange}
              placeholder={selectedGig[0].time}
-             defaultValue="5"
+            //  defaultValue={selectedGig[0].time}
              name="time"
              type="number"
              value={formState.time} 
@@ -71,7 +71,7 @@ console.log(selectedGig)
           <input
              onChange={handleChange}
              placeholder={selectedGig[0].location}
-             defaultValue={selectedGig[0].location}
+            //  defaultValue={selectedGig[0].location}
              name="location"
              type="text"
              value={formState.location} 
@@ -82,7 +82,7 @@ console.log(selectedGig)
           <input
              onChange={handleChange}
              placeholder={selectedGig[0].gigType}
-             defaultValue={selectedGig[0].gigType}
+            //  defaultValue={selectedGig[0].gigType}
              name="gigType"
              type="text"
              value={formState.gigType} 
