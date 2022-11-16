@@ -67,7 +67,7 @@ const handleClick = async(e) => {
             <h5>Instrument: {musician.instrument}</h5>
             <h5>Image: {musician.image}</h5>
             <h5>Socials: {musician.socialMedia}</h5>
-            <button id={musician.id} onClick={handleClick}>Add Musician</button>
+            <button id={musician.id} onClick={handleClick} className='add-musician-btn' >Add Musician</button>
               </div>
         )))}
       </div>

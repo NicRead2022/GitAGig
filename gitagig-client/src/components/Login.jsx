@@ -47,7 +47,7 @@ const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
               required
             />
           </div>
-          <button disabled={!formValues.email || !formValues.password}>
+          <button className='login-btn' disabled={!formValues.email || !formValues.password}>
             Login
           </button>
         </form>

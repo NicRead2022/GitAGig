@@ -60,7 +60,7 @@ console.log(bandleader.id)
              value={formState.gigType} required
           />
         </div>
-      <button type="submit">Add Gig</button>
+      <button className='add-gig-info-btn' type="submit">Add Gig</button>
     </form>
   </div>
   )}

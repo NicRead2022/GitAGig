@@ -53,7 +53,7 @@ console.log(musiciansOnGig)
                       
                     ))}
                     </ul>
-                    <button id={gigId} onClick={handleClick}>Add Musicians</button></div> 
+                    <button id={gigId} onClick={handleClick} className='gigcard-add-musician-btn' >Add Musicians</button></div> 
                 : <h5>No Details Available</h5>}
     </div>
   )
