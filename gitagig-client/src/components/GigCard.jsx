@@ -60,7 +60,7 @@ console.log(musiciansOnGig)
   return (
     <div>
           {gigDetails ? <div className="gig-card">
-                    <h5 className="gig-list-title">{gigDetails[0].venueName}: 1.3.22</h5>
+                    <h5 className="gig-list-title">{gigDetails[0].venueName}: {gigDetails[0].date}</h5>
                     <h6>{gigDetails[0].location}</h6>
                     <h6 className="gig-list-details">{gigDetails[0].gigType}</h6>
                       <button className="gigDelete" onClick={() => {deleteGig(gigId)}}>Delete Gig</button>

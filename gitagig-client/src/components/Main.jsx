@@ -13,7 +13,7 @@ const Main = ({toggleAuthenticated,authenticated, bandleader, setBandleader, che
   const [selectedGig, setSelectedGig] = useState(null)
 
   return (
-    <div className="main">
+    <div className={authenticated ? "loggedInMain" : "loggedOutMain"}>
       <Routes>
         <Route path="/" 
               element={<Login

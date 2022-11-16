@@ -26,9 +26,9 @@ const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
       {/* <div><img className="front-pic" src="https://cathouse.co.uk/wp-content/uploads/2019/05/crowd-bw.jpg"></img></div> */}
       <div className="login-wrapper">
         <form className="col" onSubmit={handleSubmit}>
-          <div className="login-inputs">
-            <label htmlFor="email">Email</label>
-            <input
+          <div>
+            <label className="login-label"htmlFor="email">Email</label>
+            <input className="login-inputs"
               onChange={handleChange}
               name="email"
               type="email"
@@ -37,9 +37,9 @@ const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
               required
             />
           </div>
-          <div className="login-inputs">
-            <label htmlFor="password">Password</label>
-            <input
+          <div >
+            <label className="login-label" htmlFor="password">Password</label>
+            <input className="login-inputs"
               onChange={handleChange}
               type="password"
               name="password"

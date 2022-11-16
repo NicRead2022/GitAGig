@@ -52,16 +52,19 @@ console.log(bandleaderGigs)
 
   return (
     <div className="bandleader-land">
-      <div className="bandleader-info">
+      <div>
+        <div className='bandleader-info'>
         <h2>Welcome {bandleaderDetails?.name}</h2>
         <img className="profile-pic" src={bandleaderDetails?.blImage}></img>
         <h5>Name: {bandleaderDetails?.name}</h5>
         <h5>Bandname:{bandleaderDetails?.band}</h5>
         <h5>Social Media: <a href={`https://${bandleaderDetails?.socialMedia}`} target="_blank">{bandleaderDetails?.socialMedia}</a></h5>
+        </div>
           <div className="gig-list">
           <Link to='/new-gig'><button className='add-gigbtn' role="button">Add Gig</button></Link>
+        </div>
+          <div className="gigs-div">
           <h4>Your Upcoming Gigs:</h4>
-            <div className="gigs-div">
                 {!bandleaderGigs ? <h5>No Upcoming Gigs</h5> :           
                 bandleaderGigs.map((gig,index) => (
                   <div key={gig.id} className="gig-card-wrapper">
@@ -71,7 +74,6 @@ console.log(bandleaderGigs)
             </div>
           </div>
       </div>
-    </div>
   )
 }
 

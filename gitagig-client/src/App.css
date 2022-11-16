@@ -10,7 +10,60 @@
   
 }
 
-.main, .login-page {
+.main{
+  margin: 0px;
+  height: calc(100vh - 178px);
+  /* background-image: url("https://cathouse.co.uk/wp-content/uploads/2019/05/crowd-bw.jpg"); */
+  flex: 1;
+  display: auto;
+  justify-content:center ;
+  flex-direction: column;
+  background-size: cover;
+  border: 5px solid;
+  color: rgb(20, 18, 3);
+  height: 10
+}
+
+.login-page  {
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  /* text-align: center; */
+}
+
+.registrationForm {
+  display: flex;
+  padding: 0;
+}
+
+.login-label {
+display: grid;
+justify-content: center;
+flex-direction: column;
+}
+
+.login-inputs, .registration-inputs {
+  justify-content: center;
+  flex-direction: column;
+  width: 30vw;
+  min-width: 150px;
+  text-align: center;
+}
+
+.loggedInMain {
+  flex: 1;
+  display: auto;
+  justify-content:center ;
+  flex-direction: column;
+  background-size: cover;
+  border: 5px solid;
+  color: rgb(20, 18, 3);
+  height: 10
+}
+
+.loggedOutMain {
   margin: 0px;
   height: calc(100vh - 178px);
   background-image: url("https://cathouse.co.uk/wp-content/uploads/2019/05/crowd-bw.jpg");
@@ -24,10 +77,6 @@
   height: 10
 }
 
-.nav-div {
-  border-bottom: 0px ;
-}
-
 .front-pic {
   width: 100vw;
   
@@ -35,12 +84,16 @@
 
 /* Login */
 
+.loggedOutNavDiv {
+  background-color: white;
+}
+
 .login-btn {
   appearance: none;
     background-color: #000000;
     border: 2px solid #1A1A1A;
     border-radius: 15px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
@@ -48,11 +101,11 @@
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
-    margin: 10;
-    min-height: 30px;
-    min-width: 100;
+    margin: 1vh;
+    min-height: 7vh;
+    min-width: 25vw;
     outline: none;
-    padding: 10px 10px;
+    padding: 2vw, 2vh;
     text-align: center;
     text-decoration: none;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
@@ -61,6 +114,14 @@
     touch-action: manipulation;
     width: 20%;
     will-change: transform;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    color: white;
   }
   
   .login-btn:disabled {
@@ -96,29 +157,35 @@ label,input{
   font-weight: 700;
 }
 .registrationFormTitle {
-  background-color: white;
+  /* background-color: white; */
 }
 .registrationForm {
-  background-image: url(https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJhbmR8ZW58MHx8MHx8&w=1000&q=80);
+  /* background-image: url(https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJhbmR8ZW58MHx8MHx8&w=1000&q=80); */
   flex: 1;
   display: flex;
   justify-content:center ;
   flex-direction: column;
   background-size: auto;
-  border: 5px solid;
-  color: rgb(20, 18, 3);
-  height:100%
+  /* border: 5px solid; */
+  /* color: rgb(20, 18, 3); */
+  height:100vh
 }
 
+.registration-labels {
+  font-size: 16px;
+  color: whitesmoke;
+  text-shadow: 2px 3px grey;
+}
 .registrationInputContainer {
-  height: 100%;
-  flex: 1;
+  height: 100vh;
+  /* flex: 1; */
   display: flex;
-  justify-content:center ;
+  /* justify-content:center ; */
   flex-direction: column;
-  background-size: auto;
-  border: 5px solid;
-  color: rgb(20, 18, 3);
+  font-size: 12px;
+  /* background-size: auto; */
+  /* border: 5px solid; */
+  /* color: rgb(20, 18, 3); */
   
 }
 .registerButton {
@@ -135,12 +202,18 @@ label,input{
   background-color: rgb(251, 248, 252);
   border: 2px solid;
   height:140px;
+  border-bottom: 0px;
+  background-image: url("https://cathouse.co.uk/wp-content/uploads/2019/05/crowd-bw.jpg");
 }
 
 /* BandleaderHome */
 
 .profile-pic {
   width:calc(50vw - 20px);
+}
+
+.bandleader-info {
+  background-size: auto;
 }
 
 .add-gigbtn  {
