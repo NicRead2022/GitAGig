@@ -55,7 +55,7 @@ console.log(bandleaderGigs)
         <h5>Bandname:{bandleaderDetails?.band}</h5>
         <h5>Social Media: <a href={`https://${bandleaderDetails?.socialMedia}`} target="_blank">{bandleaderDetails?.socialMedia}</a></h5>
           <div className="gig-list">
-          <Link to='/new-gig'><button>Add Gig</button></Link>
+          <Link to='/new-gig'><button className='add-gigbtn' role="button">Add Gig</button></Link>
           <h4>Your Upcoming Gigs:</h4>
             <div className="gigs-div">            
                 {bandleaderGigs.map((gig,index) => (
