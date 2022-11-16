@@ -26,8 +26,9 @@ const Musicians = ({selectedGig}) => {
   }, [])
 
 const handleClick = async(e) => {
+  let musicianId= e.target.id
   let addedGig = {gigId: selectedGig}
-  await axios.put(`http://localhost:3001/api/musician/${musicians.id}`, addedGig )
+  await axios.put(`http://localhost:3001/api/musician/${musicianId}`, addedGig )
   navigate ('/bandleader')
 }
 
@@ -59,7 +60,7 @@ const handleClick = async(e) => {
     <div>
       <div className='getMusicians'>
         {musicians && (musicians.map(musician => (
-          <div className='musicians' key={musician.id}><h5>Musician: {musician.name}</h5><button onClick={handleClick}>Add Musician</button></div>
+          <div className='musicians' key={musician.id}><h5>Musician: {musician.name}</h5><button id={musician.id} onClick={handleClick}>Add Musician</button></div>
         )))}
       </div>
           {/* <h3>Add Musician:</h3>
