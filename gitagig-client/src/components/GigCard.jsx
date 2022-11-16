@@ -5,6 +5,7 @@ import Client from '../services/api'
 import React from 'react'
 
 export const GigCard = ({gigId, selectedGig, setSelectedGig}) => {
+  let navigate = useNavigate()
 const [gigDetails, setGigDetails] = useState(null)
 const [musiciansOnGig, setMusiciansOnGig] = useState(null)
 
@@ -24,6 +25,12 @@ const [musiciansOnGig, setMusiciansOnGig] = useState(null)
     getDetails()
   }, [])
 
+const handleClick = (e) => {
+  setSelectedGig(e.target.id)
+  navigate('/musicians')
+}
+
+
   // key={gigDetails.id}
 console.log(musiciansOnGig)
   return (
@@ -38,7 +45,7 @@ console.log(musiciansOnGig)
                       
                     ))}
                     </ul>
-                    <Link to='/musicians'><button onClick={setSelectedGig(gigId)}>Add Musicians</button></Link></div> 
+                    <button id={gigId} onClick={handleClick}>Add Musicians</button></div> 
                 : <h5>No Details Available</h5>}
     </div>
   )
