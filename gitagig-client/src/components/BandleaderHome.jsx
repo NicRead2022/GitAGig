@@ -65,7 +65,7 @@ console.log(bandleaderGigs)
                 {!bandleaderGigs ? <h5>No Details Available</h5> :           
                 bandleaderGigs.map((gig,index) => (
                   <div key={gig.id} className="gig-card-wrapper">
-                    <GigCard key={gig.id} gigId={gig.id} selectedGig={selectedGig} setSelectedGig={setSelectedGig} deletedGig={deletedGig} toggleDeletedGig={toggleDeletedGig}/>
+                    <GigCard key={gig.id} gigId={gig.id} selectedGig={selectedGig} setSelectedGig={setSelectedGig} deletedGig={deletedGig} toggleDeletedGig={toggleDeletedGig} setBandleaderGigs={setBandleaderGigs}/>
                   </div>
                  ))}
             </div>
