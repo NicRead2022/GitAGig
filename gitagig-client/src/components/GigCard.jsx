@@ -8,7 +8,7 @@ export const GigCard = ({gigId, selectedGig, setSelectedGig, deletedGig, toggleD
   let navigate = useNavigate()
 const [gigDetails, setGigDetails] = useState(null)
 const [musiciansOnGig, setMusiciansOnGig] = useState(null)
-
+const [deletedMusician, toggleDeletedMusician] = useState(true)
 
   const getDetails = async () => {
     const response = await Client.get(`/api/gigs/${gigId}`) 
@@ -19,6 +19,9 @@ const [musiciansOnGig, setMusiciansOnGig] = useState(null)
   data.forEach(element => {
     gigMusicians.push(element.Musicians) 
   });
+  if (!gigMusicians[0].id){
+    return null
+  } else
   setMusiciansOnGig(gigMusicians)
   }
 
@@ -30,7 +33,7 @@ const [musiciansOnGig, setMusiciansOnGig] = useState(null)
 
   useEffect(() => {
     getDetails()
-  }, [])
+  }, [deletedMusician])
 
 const handleClick = (e) => {
   setSelectedGig(e.target.id)
@@ -41,6 +44,14 @@ const handleUpdateClick = (e) => {
   console.log(gigDetails)
   setSelectedGig(gigDetails)
   navigate('/update-gig')
+}
+
+const handleDeleteMusician = async(e) => {
+  let musicianId= e.target.id
+  let deletedGig = {gigId: null}
+  await axios.put(`http://localhost:3001/api/musician/${musicianId}`, deletedGig )
+  setMusiciansOnGig(null)
+  toggleDeletedMusician(!deletedMusician)
 }
 
 
@@ -55,8 +66,8 @@ console.log(musiciansOnGig)
                       <button className="gigDelete" onClick={() => {deleteGig(gigId)}}>Delete Gig</button>
                       <button className="updateGig" onClick={handleUpdateClick}>Update Gig</button>
                     <ul className="musicians-on-gig">Musicians:
-                    {musiciansOnGig.map((musicians, idx) => (
-                      <li>{musicians.name}: {musicians.genre}</li>
+                    {!musiciansOnGig ? undefined : musiciansOnGig.map((musicians, idx) => (
+                      <li>{musicians.name}: {musicians.genre}<button id={musicians.id} onClick={handleDeleteMusician}>Delete Musician</button></li>
                       
                     ))}
                     </ul>
