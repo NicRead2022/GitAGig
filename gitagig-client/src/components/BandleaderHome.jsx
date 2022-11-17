@@ -10,13 +10,14 @@ const navigate = useNavigate()
 const [bandleaderDetails, setBandleaderDetails] = useState()
 const [bandleaderGigs, setBandleaderGigs] = useState([])
 const [deletedGig, toggleDeletedGig] = useState(false) 
+const [currentBandleader, setCurrentBandleader] = useState(bandleader)
 
-let Id  = bandleader?.id
-let result 
+let {id}  = useParams()
+// setCurrentBandleader(bandleader)
 
 
 const getDetails = async () => {
-  const response = await Client.get(`/api/bandleader/${Id}`) 
+  const response = await Client.get(`/api/bandleader/${id}`) 
   console.log(response.data)
   setBandleaderDetails(response.data[0])
   let data = response.data
@@ -31,30 +32,21 @@ const getDetails = async () => {
 }
 
 useEffect(() => {
-  getDetails()
+
+      getDetails()
+
 }, [deletedGig])
 
 
 
-// useEffect(() => {
-
-//   }, [bandleaderDetails])
-
-  // const gigs =  bandleaderGigs.map((gig,index) => (
-  //     <div className="gig-card" key={gig.id}>
-  //       <h1>THIS IS A GIG</h1>
-  //     <h4 className="gig-list-title">{gig.venueName}</h4>
-  //     <div className="gig-list-details">{gig.gigType}</div>
-  //     </div>
-  // ))
-
 console.log(bandleaderGigs)
+console.log(bandleader)
 
   return (
-    <div className="bandleader-land">
-      <div>
+    <div >
+      <div className="bandleader-land">
         <div className='bandleader-info'>
-        <h2>Welcome {bandleaderDetails?.name}</h2>
+        <h2 className="welcome">Welcome {bandleaderDetails?.name}!</h2>
         <img className="profile-pic" src={bandleaderDetails?.blImage}></img>
         <h5>Name: {bandleaderDetails?.name}</h5>
         <h5>Bandname:{bandleaderDetails?.band}</h5>

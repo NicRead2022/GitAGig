@@ -207,6 +207,15 @@ label,input{
 }
 
 /* BandleaderHome */
+.welcome {
+  margin: 0 0 2vh 0;
+}
+
+.bandleader-land {
+  margin: 0;
+  padding-top: 2vh;
+  background-color: rgb(227, 227, 227);
+}
 
 .profile-pic {
   width:calc(50vw - 20px);
@@ -216,7 +225,7 @@ label,input{
   background-size: auto;
 }
 
-.add-gigbtn  {
+.add-gigbtn, .updategig, .gigDelete,  .gigcard-add-musician-btn  {
     appearance: none;
     background-color: #000000;
     border: 2px solid #1A1A1A;
@@ -226,14 +235,14 @@ label,input{
     cursor: pointer;
     display: inline-block;
     font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     line-height: normal;
-    margin: 10;
+    margin: 4px 4px;
     min-height: 30px;
-    min-width: 100;
+    min-width: 28vw;
     outline: none;
-    padding: 10px 10px;
+    padding: 1vh 1vw;
     text-align: center;
     text-decoration: none;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
@@ -347,7 +356,17 @@ label,input{
   
   /* GigCard */
 
-  .gigDelete {
+.gig-card {
+  margin: 1vh 2vw;
+  border-top: 1px solid black;
+}
+
+  ul {
+    margin: 2vh 0 0 0;
+    padding: 0;
+  }
+
+  /* .gigDelete {
     appearance: none;
     background-color: #000000;
     border: 2px solid #1A1A1A;
@@ -373,7 +392,7 @@ label,input{
     touch-action: manipulation;
     width: 20%;
     will-change: transform;
-  }
+  } */
   .gigDelete:disabled {
     pointer-events: none;
   }
@@ -388,8 +407,8 @@ label,input{
     transform: translateY(0);
   } 
 
-  .gigcard-add-musician-btn {
-    appearance: none;
+  /* .gigcard-add-musician-btn { */
+    /* appearance: none;
     background-color: #000000;
     border: 2px solid #1A1A1A;
     border-radius: 15px;
@@ -414,7 +433,7 @@ label,input{
     touch-action: manipulation;
     width: 20%;
     will-change: transform;
-  }
+  } */
   .gigcard-add-musician-btn:disabled {
     pointer-events: none;
   }

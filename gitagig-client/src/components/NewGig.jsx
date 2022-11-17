@@ -23,7 +23,7 @@ console.log(bandleader.id)
       .then((res) => {
         console.log(res);
         setFormState(initialState)
-        navigate('/bandleader')
+        navigate(`/bandleader/${bandleader.id}`)
       })
       .catch((error) => {
         console.log(error)

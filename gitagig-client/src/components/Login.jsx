@@ -18,7 +18,7 @@ const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
     setFormValues({ email: '', password: '' })
     setBandleader(payload)
     toggleAuthenticated(true)
-    navigate(`/bandleader`)
+    navigate(`/bandleader/${payload.id}`)
   }
 
   return (

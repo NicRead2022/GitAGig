@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-const UpdateGig = ({selectedGig}) => {
+const UpdateGig = ({selectedGig, bandleader}) => {
 const navigate = useNavigate()
 const initialState = {}
 const [formState, setFormState] = useState(initialState)
@@ -23,7 +23,7 @@ console.log(selectedGig)
       .then((res) => {
         console.log(res);
         setFormState(initialState)
-        navigate('/bandleader')
+        navigate(`/bandleader/${bandleader.id}`)
       })
       .catch((error) => {
         console.log(error)

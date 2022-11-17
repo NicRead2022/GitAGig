@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import Main from './Main';
 
 
-const Musicians = ({selectedGig}) => {
+const Musicians = ({selectedGig, bandleader}) => {
   const navigate = useNavigate()
   const initialState = {name: "", socialMedia: "", genre: "", about:"", image:""}
   const [formState, setFormState] = useState(initialState)
@@ -29,7 +29,7 @@ const handleClick = async(e) => {
   let musicianId= e.target.id
   let addedGig = {gigId: selectedGig}
   await axios.put(`http://localhost:3001/api/musician/${musicianId}`, addedGig )
-  navigate ('/bandleader')
+  navigate (`/bandleader/${bandleader.id}`)
 }
 
 
