@@ -46,11 +46,11 @@ console.log(bandleader)
     <div >
       <div className="bandleader-land">
         <div className='bandleader-info'>
-        <h2 className="welcome">Welcome {bandleaderDetails?.name}!</h2>
+        <h2 className="welcome">-Welcome {bandleaderDetails?.name}!-</h2>
         <img className="profile-pic" src={bandleaderDetails?.blImage}></img>
-        <h5>Name: {bandleaderDetails?.name}</h5>
-        <h5>Bandname:{bandleaderDetails?.band}</h5>
-        <h5>Social Media: <a href={`https://${bandleaderDetails?.socialMedia}`} target="_blank">{bandleaderDetails?.socialMedia}</a></h5>
+        {/* <h5>name: {bandleaderDetails?.name}</h5> */}
+        <h5>{bandleaderDetails?.band}</h5>
+        <p>social media: <a href={`https://${bandleaderDetails?.socialMedia}`} target="_blank">{bandleaderDetails?.socialMedia}</a></p>
         </div>
           <div className="gig-list">
           <Link to='/new-gig'><button className='add-gigbtn' role="button">Add Gig</button></Link>

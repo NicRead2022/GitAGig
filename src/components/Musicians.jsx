@@ -61,12 +61,12 @@ const handleClick = async(e) => {
       <div className='getMusicians'>
         {musicians && (musicians.map(musician => (
           <div className='musicians' key={musician.id}>
-            <h4 className="musician-name">Musician: {musician.name}</h4>
-            <h5 className="musician-info">Genre: {musician.genre}</h5>
-            <h5>About: {musician.about}</h5>
-            <h5>Instrument: {musician.instrument}</h5>
             <img className="musician-img" alt="musician-img" src={musician.image}/>
-            <h5>Socials: {musician.socialMedia}</h5>
+            <h4 className="musician-name">-{musician.name}-</h4>
+            <h5>{musician.instrument}</h5>
+            <p className="musician-info"><b>prefered Genre:</b> {musician.genre}</p>
+            <p><b>about:</b> {musician.about}</p>
+            <p><b>socials:</b> {musician.socialMedia}</p>
             <button id={musician.id} onClick={handleClick} className='add-musician-btn' >Add Musician</button>
               </div>
         )))}

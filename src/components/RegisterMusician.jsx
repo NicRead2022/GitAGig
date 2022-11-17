@@ -30,12 +30,12 @@ export const RegisterMusician = () => {
 
 
   return (
-    <div>
-                <h3>Register Musician:</h3>
-    <form onSubmit={handleSubmit}>
+    <div className="registrationForm">
+                <h3 className="register-title">Register Musician:</h3>
+    <form className="registrationInputContainer" onSubmit={handleSubmit}>
     <div className='new-musician-input-wrapper'>
-          <label htmlFor='name'>Name:</label>
-          <input
+          <label className="registration-labels" htmlFor='name'>Name:</label>
+          <input className="registration-inputs"
              onChange={handleChange}
              name="name"
              type="text"
@@ -43,8 +43,8 @@ export const RegisterMusician = () => {
           />
         </div>
     <div className='new-musician-input-wrapper'>
-          <label htmlFor='instrument'>Instrument:</label>
-          <input
+          <label className="registration-labels" htmlFor='instrument'>Instrument:</label>
+          <input className="registration-inputs"
              onChange={handleChange}
              name="instrument"
              type="text"
@@ -52,8 +52,8 @@ export const RegisterMusician = () => {
           />
         </div>
         <div className='new-musician-input-wrapper'>
-          <label htmlFor='socialMedia'>Socials:</label>
-          <input
+          <label className="registration-labels" htmlFor='socialMedia'>Socials:</label>
+          <input className="registration-inputs"
              onChange={handleChange}
              name="socialMedia"
              type="text"
@@ -61,8 +61,8 @@ export const RegisterMusician = () => {
           />
         </div>
         <div className='new-musician-input-wrapper'>
-          <label htmlFor='genre'>Genre:</label>
-          <input
+          <label className="registration-labels" htmlFor='genre'>Genre:</label>
+          <input className="registration-inputs"
              onChange={handleChange}
              name="genre"
              type="text"
@@ -70,8 +70,8 @@ export const RegisterMusician = () => {
           />
         </div>
         <div className='new-musician-input-wrapper'>
-          <label htmlFor='about'>About:</label>
-          <input
+          <label className="registration-labels" htmlFor='about'>About:</label>
+          <input className="registration-inputs"
              onChange={handleChange}
              name="about"
              type="text"
@@ -79,15 +79,15 @@ export const RegisterMusician = () => {
           />
         </div>
         <div className='new-musician-input-wrapper'>
-          <label htmlFor='image'>Image:</label>
-          <input
+          <label className="registration-labels" htmlFor='image'>Image:</label>
+          <input className="registration-inputs"
              onChange={handleChange}
              name="image"
              type="text"
              value={formState.image} 
           />
         </div>
-      <button type="submit">Create Musician</button>
+      <button className="registerButton" type="submit">Create Musician</button>
     </form>
     </div>
     
