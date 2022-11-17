@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
-import './App.css';
-import Header from './components/Header';
-import Main from './components/Main';
+import './App.css'
+import Header from './components/Header'
+import Main from './components/Main'
 import { CheckSession } from './services/Auth'
-
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -29,17 +28,26 @@ function App() {
     localStorage.clear()
   }
 
-
   return (
     <div className="App">
       <header className="App-header">
-        <Header authenticated={authenticated} user={user} handleLogOut={handleLogOut}/>
+        <Header
+          authenticated={authenticated}
+          user={user}
+          handleLogOut={handleLogOut}
+        />
       </header>
-        <main>
-          <Main toggleAuthenticated={toggleAuthenticated} authenticated={authenticated} bandleader={user} setBandleader={setUser} checkToken={checkToken}/>
-        </main>
+      <main>
+        <Main
+          toggleAuthenticated={toggleAuthenticated}
+          authenticated={authenticated}
+          bandleader={user}
+          setBandleader={setUser}
+          checkToken={checkToken}
+        />
+      </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

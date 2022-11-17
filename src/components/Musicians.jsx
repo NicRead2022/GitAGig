@@ -16,7 +16,7 @@ const Musicians = ({selectedGig, bandleader}) => {
   // let { id } = useParams()
 
   const getMusicians = async () => {
-    const res = await axios.get(`http://localhost:3001/api/musician`)
+    const res = await axios.get(`https://gitagig.herokuapp.com/api/musician`)
     setMusicians(res.data)
   }
 
@@ -28,7 +28,7 @@ const Musicians = ({selectedGig, bandleader}) => {
 const handleClick = async(e) => {
   let musicianId= e.target.id
   let addedGig = {gigId: selectedGig}
-  await axios.put(`http://localhost:3001/api/musician/${musicianId}`, addedGig )
+  await axios.put(`https://gitagig.herokuapp.com/api/musician/${musicianId}`, addedGig )
   navigate (`/bandleader/${bandleader.id}`)
 }
 
