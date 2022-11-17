@@ -28,7 +28,7 @@ console.log(selectedGig)
       .catch((error) => {
         console.log(error)
       })
-  }
+  } 
   return (
     <div>
           <h3>Update Your Gig:</h3>
