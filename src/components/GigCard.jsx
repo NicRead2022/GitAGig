@@ -49,7 +49,7 @@ const handleUpdateClick = (e) => {
 const handleDeleteMusician = async(e) => {
   let musicianId= e.target.id
   let deletedGig = {gigId: null}
-  await axios.put(`http://localhost:3001/api/musician/${musicianId}`, deletedGig )
+  await axios.put(`https://hiredgig.herokuapp.com/api/musician/${musicianId}`, deletedGig )
   setMusiciansOnGig(null)
   toggleDeletedMusician(!deletedMusician)
 }
