@@ -64,9 +64,9 @@ console.log(musiciansOnGig)
                     <h6>{gigDetails[0].location}</h6>
                     <h6 className="gig-list-details">{gigDetails[0].gigType}</h6>
                       <button className="gigDelete" onClick={() => {deleteGig(gigId)}}>Delete Gig</button>
-                      <button className="updateGig" onClick={handleUpdateClick}>Update Gig</button>
+                      <button className="updategig" onClick={handleUpdateClick}>Update Gig</button>
                     <ul className="musicians-on-gig">Musicians:
-                    {!musiciansOnGig ? undefined : musiciansOnGig.map((musicians, idx) => (
+                    {!musiciansOnGig ? <h6>No Musicians On Gig</h6> : musiciansOnGig.map((musicians, idx) => (
                       <li>{musicians.name}: {musicians.genre}<button id={musicians.id} onClick={handleDeleteMusician}>Delete Musician</button></li>
                       
                     ))}
