@@ -66,7 +66,7 @@ const Register = () => {
           />
         </div>
         <div className='registrationInputWrapper'>
-          <label className='registration-labels' htmlFor='socialMedia'>socials:</label>
+          <label className='registration-labels' htmlFor='socialMedia'>Socials:</label>
           <input className='registration-inputs'
              onChange={handleChange}
              name="socialMedia"
@@ -76,7 +76,7 @@ const Register = () => {
           />
         </div>
         <div className='registrationInputWrapper'>
-          <label className='registration-labels' htmlFor='blImage'>image:</label>
+          <label className='registration-labels' htmlFor='blImage'>Image:</label>
           <input className='registration-inputs'
              onChange={handleChange}
              name="blImage"

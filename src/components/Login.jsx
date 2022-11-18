@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { LoginUser } from '../services/Auth'
 
 const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
@@ -53,6 +53,8 @@ const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
         </form>
         
       </div>
+      <h6 className="register-musician-text">If you are a musician and want to add yourself to our database please</h6>
+      <h6><Link to="/register-musician">CLICK HERE TO GET ON THE LIST</Link></h6>
     </div>
   )
 }

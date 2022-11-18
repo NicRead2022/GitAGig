@@ -24,12 +24,22 @@
   height: 10
 }
 
+.register-musician-link {
+  margin: 2vh 0 0 0;
+  padding: 0;
+}
+.register-musician-text {
+  margin: 19vh 0 0 0;
+  padding: 0;
+}
+
 .login-page  {
+  margin-top: 12vh;;
   display: flex;
   height: 80%;
-  justify-content: center;
+  justify-content:flex-start;
   flex-direction: column;
-  align-content: center;
+  /* align-content: center; */
   /* text-align: center; */
 }
 
@@ -50,6 +60,7 @@ flex-direction: column;
   width: 30vw;
   min-width: 150px;
   text-align: center;
+  /* position: relative */
 }
 
 .loggedInMain {
@@ -57,16 +68,34 @@ flex-direction: column;
   display: auto;
   justify-content:center ;
   flex-direction: column;
-  background-size: cover;
+  background-color: #d3d3d3;
+  /* background-size: cover; */
   border: 5px solid;
   color: rgb(20, 18, 3);
   height: 10
 }
 
+.loggedOutMain img {
+  opacity: .5;
+}
+
+.loggedOutMain::before{
+  content: "";
+  background-image: url("https://cathouse.co.uk/wp-content/uploads/2019/05/crowd-bw.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.7;
+  z-index: -1;
+}
+
 .loggedOutMain {
+  position: relative;
   margin: 0px;
   height: calc(100vh - 178px);
-  background-image: url("https://cathouse.co.uk/wp-content/uploads/2019/05/crowd-bw.jpg");
   flex: 1;
   display: auto;
   justify-content:center ;
@@ -76,6 +105,7 @@ flex-direction: column;
   color: rgb(20, 18, 3);
   height: 10
 }
+
 
 .front-pic {
   width: 100vw;
@@ -85,7 +115,15 @@ flex-direction: column;
 /* Login */
 
 .loggedOutNavDiv {
-  background-color: white;
+  /* background-color: white; */
+}
+
+.logged-in-color {
+  color:#8d8d8d
+}
+
+.logged-out-color {
+  color:#9a9a9a
 }
 
 .login-btn {
@@ -121,7 +159,7 @@ flex-direction: column;
   }
 
   a:hover {
-    color: white;
+    color: rgb((192, 191, 191)88, 179, 179);
   }
   
   .login-btn:disabled {
@@ -157,8 +195,14 @@ label,input{
   font-weight: 700;
 }
 .registrationFormTitle {
+  margin: 0 0 .5vh 0;
   /* background-color: white; */
 }
+
+/* .register-title {
+  position: relative
+} */
+
 .registrationForm {
   /* background-image: url(https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJhbmR8ZW58MHx8MHx8&w=1000&q=80); */
   flex: 1;
@@ -172,9 +216,10 @@ label,input{
 }
 
 .registration-labels {
-  font-size: 16px;
-  color: whitesmoke;
-  text-shadow: 2px 3px grey;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  /* position: relative */
+  /* text-shadow: 1px 1px grey; */
 }
 .registrationInputContainer {
   height: 100vh;
@@ -188,12 +233,12 @@ label,input{
   /* color: rgb(20, 18, 3); */
   
 }
-.registerButton {
+/* .registerButton {
   width:calc(100vw - 250px);
   margin-right: auto;
   margin-left: auto;
   margin-top: 8px;
-}
+} */
 
 
 /* Header */
@@ -214,18 +259,25 @@ label,input{
 .bandleader-land {
   margin: 0;
   padding-top: 2vh;
-  background-color: rgb(227, 227, 227);
+  /* background-color: rgb(227, 227, 227); */
 }
 
 .profile-pic {
-  width:calc(50vw - 20px);
+  max-width: 100%;
+  max-height: 240px;
+  border-radius: 5%;
+  border: 1px solid black;
 }
 
 .bandleader-info {
   background-size: auto;
 }
 
-.add-gigbtn, .updategig, .gigDelete,  .gigcard-add-musician-btn  {
+.registerButton {
+  align-self:center;
+}
+
+.add-gigbtn, .registerButton, .updategig, .gigDelete,  .gigcard-add-musician-btn,  .add-musician-btn,  .add-gig-info-btn  {
     appearance: none;
     background-color: #000000;
     border: 2px solid #1A1A1A;
@@ -267,10 +319,24 @@ label,input{
     transform: translateY(0);
   } 
 
+  .updategig:disabled {
+    pointer-events: none;
+  }
+  
+  .updategig:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .updategig:active {
+    box-shadow: none;
+    transform: translateY(0);
+  } 
+
 
   /* NewGig */
 
-  .add-gig-info-btn {
+  /* .add-gig-info-btn {
     appearance: none;
     background-color: #000000;
     border: 2px solid #1A1A1A;
@@ -296,7 +362,7 @@ label,input{
     touch-action: manipulation;
     width: 20%;
     will-change: transform;
-  }
+  } */
   .add-gig-info-btn:disabled {
     pointer-events: none;
   }
@@ -313,7 +379,19 @@ label,input{
 
   /* Musicians */
 
-  .add-musician-btn {
+.musicians {
+  margin: 1vh 2vw;
+  padding: 1vh 2vh;
+  border-top: 1px solid black;
+}
+
+.musician-img {
+  max-width: 100%;
+  max-height: 210px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+  /* .add-musician-btn {
     appearance: none;
     background-color: #000000;
     border: 2px solid #1A1A1A;
@@ -339,7 +417,7 @@ label,input{
     touch-action: manipulation;
     width: 20%;
     will-change: transform;
-  }
+  } */
   .add-musician-btnn:disabled {
     pointer-events: none;
   }
@@ -364,6 +442,41 @@ label,input{
   ul {
     margin: 2vh 0 0 0;
     padding: 0;
+  }
+
+  li {
+    list-style:none;
+    font-size: 10px;
+  }
+
+  .delete-musician {
+    align-self: center;
+    appearance: none;
+    background-color: #e30000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 12px;
+    font-weight: 600;
+    /* line-height: normal; */
+    margin: 4px 4px;
+    height: 24px;
+    min-height: 22px;
+    min-width: 20vw;
+    outline: none;
+    padding: .4vh 1vw;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+     /* width: 15%; */
+    will-change: transform;
   }
 
   /* .gigDelete {
@@ -407,6 +520,24 @@ label,input{
     transform: translateY(0);
   } 
 
+p {
+  font-size: 13px;
+}
+
+.hired-musician {
+  margin: 3vh 4vw;
+  padding-bottom: 1vh;
+  font-size: 12px;
+  /* border-bottom: 1px solid black; */
+  /* border-bottom-style:dotted; */
+}
+
+.musicians-on-gig{
+  margin-bottom: 2vh;
+  text-align: center;
+}
+
+
   /* .gigcard-add-musician-btn { */
     /* appearance: none;
     background-color: #000000;
@@ -447,3 +578,4 @@ label,input{
     box-shadow: none;
     transform: translateY(0);
   } 
+

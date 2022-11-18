@@ -60,14 +60,16 @@ console.log(musiciansOnGig)
   return (
     <div>
           {gigDetails ? <div className="gig-card">
-                    <h5 className="gig-list-title">{gigDetails[0].venueName}: {gigDetails[0].date}</h5>
-                    <h6>{gigDetails[0].location}</h6>
-                    <h6 className="gig-list-details">{gigDetails[0].gigType}</h6>
+                    <h4 className="gig-list-title">{gigDetails[0].venueName}</h4>
+                    <p className="gig-list-type"><b>{gigDetails[0].date}</b> @ {gigDetails[0].time}pm</p>
+                    <p className="gig-list-location"><b>located at:</b> {gigDetails[0].location}</p>
+                    <p className="gig-list-type"><b>type of gig:</b> {gigDetails[0].gigType}</p>
                       <button className="gigDelete" onClick={() => {deleteGig(gigId)}}>Delete Gig</button>
                       <button className="updategig" onClick={handleUpdateClick}>Update Gig</button>
-                    <ul className="musicians-on-gig">Musicians:
+                    <ul className="musicians-on-gig">
+                    <h4>Musicians:</h4>
                     {!musiciansOnGig ? <h6>No Musicians On Gig</h6> : musiciansOnGig.map((musicians, idx) => (
-                      <li>{musicians.name}: {musicians.genre}<button id={musicians.id} onClick={handleDeleteMusician}>Delete Musician</button></li>
+                      <p className="hired-musician"><b>{musicians.name}</b> <br></br>-{musicians.instrument}-<br></br><button className="delete-musician" id={musicians.id} onClick={handleDeleteMusician}>Delete Musician</button></p>
                       
                     ))}
                     </ul>
