@@ -1,4 +1,4 @@
-# Git-A-Gig
+# HiredGig
 ## Date Due: November 18,2022
 
 ### By: [Jeremy Harrell](https://www.linkedin.com/in/jeremy-harrell-softwareengineer/)  |     [Jon Scarpelli](https://www.linkedin.com/in/jon-scarpelli/) |    [Nicole Read](https://www.linkedin.com/in/nicole-read22/)
