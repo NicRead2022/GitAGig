@@ -3,8 +3,6 @@ import {useParams} from 'react-router-dom'
 
 const MusicianCard = ({selectedMusician}) => {
 let {idx} = useParams()
-console.log(idx)
-console.log(selectedMusician[idx])
   return(
     <div className="musician-card-container">
       <h3>{selectedMusician[idx].name}</h3>

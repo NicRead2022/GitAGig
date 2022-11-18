@@ -13,7 +13,6 @@
 .main{
   margin: 0px;
   height: calc(100vh - 178px);
-  /* background-image: url("https://cathouse.co.uk/wp-content/uploads/2019/05/crowd-bw.jpg"); */
   flex: 1;
   display: auto;
   justify-content:center ;
@@ -39,8 +38,6 @@
   height: 80%;
   justify-content:flex-start;
   flex-direction: column;
-  /* align-content: center; */
-  /* text-align: center; */
 }
 
 .registrationForm {
@@ -60,7 +57,6 @@ flex-direction: column;
   width: 30vw;
   min-width: 150px;
   text-align: center;
-  /* position: relative */
 }
 
 .loggedInMain {
@@ -69,7 +65,6 @@ flex-direction: column;
   justify-content:center ;
   flex-direction: column;
   background-color: #d3d3d3;
-  /* background-size: cover; */
   border: 5px solid;
   color: rgb(20, 18, 3);
   height: 10
@@ -114,10 +109,6 @@ flex-direction: column;
 
 /* Login */
 
-.loggedOutNavDiv {
-  /* background-color: white; */
-}
-
 .logged-in-color {
   color:#8d8d8d
 }
@@ -131,7 +122,6 @@ flex-direction: column;
     background-color: #000000;
     border: 2px solid #1A1A1A;
     border-radius: 15px;
-    /* box-sizing: border-box; */
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
@@ -196,49 +186,30 @@ label,input{
 }
 .registrationFormTitle {
   margin: 0 0 .5vh 0;
-  /* background-color: white; */
 }
 
-/* .register-title {
-  position: relative
-} */
 
 .registrationForm {
-  /* background-image: url(https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJhbmR8ZW58MHx8MHx8&w=1000&q=80); */
   flex: 1;
   display: flex;
   justify-content:center ;
   flex-direction: column;
   background-size: auto;
-  /* border: 5px solid; */
-  /* color: rgb(20, 18, 3); */
   height:100vh
 }
 
 .registration-labels {
   font-size: 14px;
   color: rgb(0, 0, 0);
-  /* position: relative */
-  /* text-shadow: 1px 1px grey; */
 }
 .registrationInputContainer {
   height: 100vh;
-  /* flex: 1; */
   display: flex;
-  /* justify-content:center ; */
   flex-direction: column;
   font-size: 12px;
-  /* background-size: auto; */
-  /* border: 5px solid; */
-  /* color: rgb(20, 18, 3); */
+
   
 }
-/* .registerButton {
-  width:calc(100vw - 250px);
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 8px;
-} */
 
 
 /* Header */
@@ -259,7 +230,6 @@ label,input{
 .bandleader-land {
   margin: 0;
   padding-top: 2vh;
-  /* background-color: rgb(227, 227, 227); */
 }
 
 .profile-pic {
@@ -336,33 +306,6 @@ label,input{
 
   /* NewGig */
 
-  /* .add-gig-info-btn {
-    appearance: none;
-    background-color: #000000;
-    border: 2px solid #1A1A1A;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 10;
-    min-height: 30px;
-    min-width: 100;
-    outline: none;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 20%;
-    will-change: transform;
-  } */
   .add-gig-info-btn:disabled {
     pointer-events: none;
   }
@@ -391,33 +334,6 @@ label,input{
   border: 1px solid black;
   border-radius: 3px;
 }
-  /* .add-musician-btn {
-    appearance: none;
-    background-color: #000000;
-    border: 2px solid #1A1A1A;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 10;
-    min-height: 30px;
-    min-width: 100;
-    outline: none;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 20%;
-    will-change: transform;
-  } */
   .add-musician-btnn:disabled {
     pointer-events: none;
   }
@@ -462,7 +378,6 @@ label,input{
     font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-size: 12px;
     font-weight: 600;
-    /* line-height: normal; */
     margin: 4px 4px;
     height: 24px;
     min-height: 22px;
@@ -475,37 +390,10 @@ label,input{
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-     /* width: 15%; */
     will-change: transform;
   }
 
-  /* .gigDelete {
-    appearance: none;
-    background-color: #000000;
-    border: 2px solid #1A1A1A;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 10;
-    min-height: 30px;
-    min-width: 100;
-    outline: none;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 20%;
-    will-change: transform;
-  } */
+
   .gigDelete:disabled {
     pointer-events: none;
   }
@@ -528,8 +416,6 @@ p {
   margin: 3vh 4vw;
   padding-bottom: 1vh;
   font-size: 12px;
-  /* border-bottom: 1px solid black; */
-  /* border-bottom-style:dotted; */
 }
 
 .musicians-on-gig{
@@ -538,33 +424,6 @@ p {
 }
 
 
-  /* .gigcard-add-musician-btn { */
-    /* appearance: none;
-    background-color: #000000;
-    border: 2px solid #1A1A1A;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 10;
-    min-height: 30px;
-    min-width: 100;
-    outline: none;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 20%;
-    will-change: transform;
-  } */
   .gigcard-add-musician-btn:disabled {
     pointer-events: none;
   }

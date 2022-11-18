@@ -14,7 +14,6 @@ const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const payload = await LoginUser(formValues)
-    console.log(payload)
     setFormValues({ email: '', password: '' })
     setBandleader(payload)
     toggleAuthenticated(true)
@@ -59,27 +58,3 @@ const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
 }
 
 export default SignIn
-
-
-// const Login = () => {
-
-
-
-//   return (
-//     <div className="login-form">
-//       <h2 className="login-head">Please Login</h2>
-//       <form onSubmit={submitLogin}>
-//       <input 
-//         id="username"
-//         onChange={handleChange}>
-//       </input>
-//       <input 
-//         id="password"
-//         onChange={handleChange}>
-//       </input>
-//       </form>
-//     </div>
-//   )
-// }
-
-// export default Login

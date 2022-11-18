@@ -4,7 +4,7 @@ import axios from 'axios'
 import Client from '../services/api'
 import React from 'react'
 
-export const GigCard = ({gigId, setSelectedGig, deletedGig, toggleDeletedGig, setBandleaderGigs, selectedMusician, setSelectedMusician}) => {
+export const GigCard = ({gigId, setSelectedGig, deletedGig, toggleDeletedGig, setBandleaderGigs, setSelectedMusician}) => {
   let navigate = useNavigate()
 const [gigDetails, setGigDetails] = useState(null)
 const [musiciansOnGig, setMusiciansOnGig] = useState(null)
@@ -13,7 +13,6 @@ const [deletedMusician, toggleDeletedMusician] = useState(true)
   const getDetails = async () => {
     const response = await Client.get(`/api/gigs/${gigId}`) 
     setGigDetails(response.data)
-    console.log(response.data)
     let data = response.data
   let gigMusicians = []
   data.forEach(element => {
@@ -42,7 +41,6 @@ const handleClick = (e) => {
 }
 
 const handleUpdateClick = (e) => {
-  console.log(gigDetails)
   setSelectedGig(gigDetails)
   navigate('/update-gig')
 }
