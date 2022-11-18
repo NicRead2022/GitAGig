@@ -30,7 +30,7 @@ const Main = ({toggleAuthenticated,authenticated, bandleader, setBandleader, che
         <Route path="/musicians" element={<Musicians bandleader={bandleader} selectedGig={selectedGig}/>}></Route>
         <Route path="/register" element={<Register authenticated={authenticated}/>}></Route>
         <Route path="/register-musician" element={<RegisterMusician/>}></Route>
-        <Route path="/musician/:id" element={<MusicianCard selectedMusician={selectedMusician} setSelectedMusician={setSelectedMusician}/>}></Route>
+        <Route path="/musician/:idx" element={<MusicianCard selectedMusician={selectedMusician} setSelectedMusician={setSelectedMusician}/>}></Route>
       </Routes>
 
   
