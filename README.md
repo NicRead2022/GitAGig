@@ -23,9 +23,11 @@
 <img src="https://user-images.githubusercontent.com/107156341/202730161-78752f27-fc79-4ff6-a47a-91d758294cc8.png" width=50% height=50%>
 
 ## Technologies Used
-[Github](https://github.com/)
-[Trello](trello.com)
-[Coder-Coder](https://coder-coder.com/background-image-opacity/)
+[Github](https://github.com/) |
+[Trello](trello.com) |
+[Coder-Coder](https://coder-coder.com/background-image-opacity/) |
+[W3Schools](W3schools.com) |
+[Stack Overflow](https://stackoverflow.com/)
 
 
 <p align="center">
