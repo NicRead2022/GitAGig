@@ -8,7 +8,6 @@ const UpdateGig = ({selectedGig, bandleader}) => {
 const navigate = useNavigate()
 const initialState = {}
 const [formState, setFormState] = useState(initialState)
-console.log(selectedGig)
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value })
@@ -18,7 +17,6 @@ console.log(selectedGig)
     e.preventDefault();  
     await Client.put(`/api/gigs/${selectedGig[0].id}`, formState)
       .then((res) => {
-        console.log(res);
         setFormState(initialState)
         navigate(`/bandleader/${bandleader.id}`)
       })

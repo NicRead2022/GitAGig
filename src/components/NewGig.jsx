@@ -8,7 +8,6 @@ const NewGig = ({bandleader}) => {
 const navigate = useNavigate()
 const initialState = {venueName: "", location: "", gigType: ""}
 const [formState, setFormState] = useState(initialState)
-console.log(bandleader.id)
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value })
@@ -19,7 +18,6 @@ console.log(bandleader.id)
     let newGigWithId = {...formState, bandleaderId: bandleader.id }
     await Client.post(`/api/gigs`, newGigWithId)
       .then((res) => {
-        console.log(res);
         setFormState(initialState)
         navigate(`/bandleader/${bandleader.id}`)
       })

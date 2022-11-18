@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import Client from '../services/api'
 import React from 'react'
 import { GigCard } from './GigCard'
@@ -13,7 +13,6 @@ let {id}  = useParams()
 
 const getDetails = async () => {
   const response = await Client.get(`/api/bandleader/${id}`) 
-  console.log(response.data)
   setBandleaderDetails(response.data[0])
   let data = response.data
   let bandGigs = []
