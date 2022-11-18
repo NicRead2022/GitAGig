@@ -8,7 +8,7 @@
 
 [Google Slide Presentation](https://docs.google.com/presentation/d/120T29Fd3J7_0IsQvTcP0-D6LQryP7_WMqAjz56KhhiU/edit?usp=sharing)
 ***
-## Description: Are you looking to hie a musician? Are you a musician wanting to advertise yourself for hire?. Do these scenerios cause you to be triggered? Did you have a band member call out sick and need a last minute replacement? Did your drummer decide he didn't like your set list and dip? Did you just get booked to be the opening act for Bad Bunny and you need to double your band size? This is your one stop shop where you can come to find any musician for hire to fit your bands needs. Are you a retired triangle tapper looking to dust off the old chops? This app is what you need to fill band vacancies and book gigs!
+## Description: Are you looking to hire a musician? Are you a musician wanting to advertise yourself for hire?. Do these scenerios cause you to be triggered? Did you have a band member call out sick and need a last minute replacement? Did your drummer decide he didn't like your set list and dip? Did you just get booked to be the opening act for Bad Bunny and you need to double your band size? This is your one stop shop where you can come to find any musician for hire to fit your bands needs. Are you a retired triangle tapper looking to dust off the old chops? This app is what you need to fill band vacancies and book gigs!
 
 
 ![Image](https://user-images.githubusercontent.com/107156341/200996430-aaaacaa7-64b2-47b2-af03-155a113e2284.png)
@@ -22,6 +22,8 @@
 ## Technologies Used
 [Github](https://github.com/)
 [Trello](trello.com)
+[Coder-Coder](https://coder-coder.com/background-image-opacity/)
+
 
 <p align="center">
  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f1282646151279.58496bfe7fe18.gif" width="250" height="250" />
