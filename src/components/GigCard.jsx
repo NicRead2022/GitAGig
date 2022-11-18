@@ -4,7 +4,7 @@ import axios from 'axios'
 import Client from '../services/api'
 import React from 'react'
 
-export const GigCard = ({gigId, selectedGig, setSelectedGig, deletedGig, toggleDeletedGig, setBandleaderGigs}) => {
+export const GigCard = ({gigId, setSelectedGig, deletedGig, toggleDeletedGig, setBandleaderGigs, selectedMusician, setSelectedMusician}) => {
   let navigate = useNavigate()
 const [gigDetails, setGigDetails] = useState(null)
 const [musiciansOnGig, setMusiciansOnGig] = useState(null)
@@ -23,6 +23,7 @@ const [deletedMusician, toggleDeletedMusician] = useState(true)
     return null
   } else
   setMusiciansOnGig(gigMusicians)
+  setSelectedMusician(gigMusicians)
   }
 
   const deleteGig = async () => {
@@ -55,7 +56,6 @@ const handleDeleteMusician = async(e) => {
 }
 
 
-console.log(musiciansOnGig)
   return (
     <div>
           {gigDetails ? <div className="gig-card">
@@ -68,8 +68,7 @@ console.log(musiciansOnGig)
                     <ul className="musicians-on-gig">
                     <h4>Musicians:</h4>
                     {!musiciansOnGig ? <h6>No Musicians On Gig</h6> : musiciansOnGig.map((musicians, idx) => (
-                      <p key="musicians.id" className="hired-musician"><b>{musicians.name}</b> <br></br>-{musicians.instrument}-<br></br><button className="delete-musician" id={musicians.id} onClick={handleDeleteMusician}>Delete Musician</button></p>
-                      
+                     <p> <Link to={`/musician/${idx}`}  key="musicians.id" className="hired-musician"><b>{musicians.name}</b> <br></br>-{musicians.instrument}-<br></br></Link><button className="delete-musician" id={musicians.id} onClick={handleDeleteMusician}>Delete Musician</button></p>
                     ))}
                     </ul>
                     <button id={gigId} onClick={handleClick} className='gigcard-add-musician-btn' >Add Musicians</button></div> 

@@ -4,7 +4,7 @@ import Client from '../services/api'
 import React from 'react'
 import { GigCard } from './GigCard'
 
-const BandleaderHome = ({bandleader, selectedGig, setSelectedGig}) => {
+const BandleaderHome = ({selectedGig, setSelectedGig, selectedMusician, setSelectedMusician}) => {
 const [bandleaderDetails, setBandleaderDetails] = useState()
 const [bandleaderGigs, setBandleaderGigs] = useState([])
 const [deletedGig, toggleDeletedGig] = useState(false) 
@@ -47,7 +47,7 @@ useEffect(() => {
                 {!bandleaderGigs ? <h5>No Upcoming Gigs</h5> :           
                 bandleaderGigs.map((gig,index) => (
                   <div key={gig.id} className="gig-card-wrapper">
-                    <GigCard key={gig.id} gigId={gig.id} selectedGig={selectedGig} setSelectedGig={setSelectedGig} deletedGig={deletedGig} toggleDeletedGig={toggleDeletedGig} setBandleaderGigs={setBandleaderGigs}/>
+                    <GigCard key={gig.id} gigId={gig.id} selectedMusician={selectedMusician} setSelectedMusician={setSelectedMusician} selectedGig={selectedGig} setSelectedGig={setSelectedGig} deletedGig={deletedGig} toggleDeletedGig={toggleDeletedGig} setBandleaderGigs={setBandleaderGigs}/>
                   </div>
                  ))}
             </div>
