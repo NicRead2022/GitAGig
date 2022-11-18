@@ -64,6 +64,7 @@ const handleClick = async(e) => {
             <img className="musician-img" alt="musician-img" src={musician.image}/>
             <h4 className="musician-name">{musician.name}</h4>
             <h5>-{musician.instrument}-</h5>
+            <h6>${musician.rate}</h6>
             <p className="musician-info"><b>preferred genre:</b> {musician.genre}</p>
             <p><b>about:</b> {musician.about}</p>
             <p><b>socials:</b> {musician.socialMedia}</p>
