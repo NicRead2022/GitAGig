@@ -35,7 +35,7 @@
 ***
 
 ## Future Updates
-### Develop a seperate login and profile for musicians.
+### Develop a separate login and profile for musicians.
 
 
 
