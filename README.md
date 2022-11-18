@@ -1,7 +1,7 @@
 # Git-A-Gig
 ## Date Due: November 18,2022
 
-### By: [Jeremy Harrell](https://www.linkedin.com/in/jeremy-harrell-softwareengineer/)       [Jon Scarpelli](https://www.linkedin.com/in/jon-scarpelli/)    [Nicole Read](https://www.linkedin.com/in/nicole-read22/)
+### By: [Jeremy Harrell](https://www.linkedin.com/in/jeremy-harrell-softwareengineer/)  |     [Jon Scarpelli](https://www.linkedin.com/in/jon-scarpelli/) |    [Nicole Read](https://www.linkedin.com/in/nicole-read22/)
 
 ***
 [Trello Board](https://trello.com/invite/b/gZaHXww6/ATTI32ff4fa0ffa2fd95c4ae6a8269b34d00026D7D25/git-a-gig-pern-app)
