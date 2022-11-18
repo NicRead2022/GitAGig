@@ -6,7 +6,7 @@ import { RegisterUser } from '../services/Auth'
 
 
 
-const Register = () => {
+const Register = ({authenticated}) => {
   const navigate = useNavigate()
   const initialState = { name: "", band: "", socialMedia: "", blImage: "", email: "", password:"", confirmPassword:"" }
   const [formState, setFormState] = useState(initialState)
@@ -33,7 +33,8 @@ const Register = () => {
 
   return (
     <div className='registrationForm'>
-      <h1 className='registrationFormTitle'>Register</h1>
+      {authenticated ? <h1>You Are Already Registered</h1> : 
+      <div><h1 className='registrationFormTitle'>Register</h1>
       <form className='registrationInputContainer' onSubmit={handleSubmit}>
         <div className='registrationInputWrapper'>
           <label className='registration-labels' htmlFor='name'>Name:</label>
@@ -109,7 +110,8 @@ const Register = () => {
         >
           Register
         </button>
-      </form>
+      </form></div>
+      }
     </div>
   )
 }
