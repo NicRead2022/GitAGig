@@ -14,7 +14,6 @@ const Main = ({toggleAuthenticated,authenticated, bandleader, setBandleader, che
 
   return (
     <div className={authenticated ? "loggedInMain" : "loggedOutMain"}>
-    {/* <div className="loggedOutMainBG"></div>  */}
       <Routes>
         <Route path="/" 
               element={<Login

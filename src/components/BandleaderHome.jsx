@@ -36,7 +36,6 @@ useEffect(() => {
         <div className='bandleader-info'>
         <h2 className="welcome">Welcome {bandleaderDetails?.name}!</h2>
         <img className="profile-pic" alt="profile-pic" src={bandleaderDetails?.blImage}></img>
-        {/* <h5>name: {bandleaderDetails?.name}</h5> */}
         <h5>band name:{bandleaderDetails?.band}</h5>
         <p>social media: <a href={`https://${bandleaderDetails?.socialMedia}`} rel="noreferrer" target="_blank">{bandleaderDetails?.socialMedia}</a></p>
         </div>
