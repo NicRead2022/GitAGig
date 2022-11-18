@@ -3,7 +3,6 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { RegisterUser } from '../services/Auth'
-// import axios from 'axios'
 
 
 
@@ -72,7 +71,6 @@ const Register = () => {
              name="socialMedia"
              type="text"
              value={formState.socialMedia}
-            //  this should be locations for multiple different URLs? 
           />
         </div>
         <div className='registrationInputWrapper'>

@@ -13,16 +13,7 @@ export const RegisterMusician = () => {
     await axios.post(`https://gitagig.herokuapp.com/api/musician/`, formState )
     setFormState(initialState);
     navigate('/')
-    
   }
-  // await axios.post({
-  //   name: formState.name,
-  //   email: formState.instrument,
-  //   password: formState.socialMedia,
-  //   band: formState.image,
-  //   socialMedia: formState.genre,
-  //   blImage: formState.about
-  // });
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value});

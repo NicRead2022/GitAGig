@@ -1,10 +1,8 @@
 import React from 'react'
-import Client from '../services/api'
 import { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect } from 'react';
-import Main from './Main';
 
 
 const Musicians = ({selectedGig, bandleader}) => {
@@ -12,8 +10,6 @@ const Musicians = ({selectedGig, bandleader}) => {
   const initialState = {name: "", socialMedia: "", genre: "", about:"", image:""}
   const [formState, setFormState] = useState(initialState)
   const [musicians,setMusicians] = useState([])
-  // let Id = gig.id
-  // let { id } = useParams()
 
   const getMusicians = async () => {
     const res = await axios.get(`https://gitagig.herokuapp.com/api/musician`)
@@ -31,29 +27,6 @@ const handleClick = async(e) => {
   await axios.put(`https://gitagig.herokuapp.com/api/musician/${musicianId}`, addedGig )
   navigate (`/bandleader/${bandleader.id}`)
 }
-
-
-  const handleChange = (e) => {
-    setFormState({ ...formState, [e.target.name]: e.target.value })
-  }
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();  
-  //   let newMusicianWithId = {...formState}
-  //   await Client.post(`http://localhost:3001/api/musician`, newMusicianWithId)
-  //     .then((res) => {
-  //       console.log(res);
-  //       setFormState(initialState)
-  //       navigate('/bandleader')
-  //     })
-  //     .catch((error) => {
-  //       console.log(error)
-  //     })
-  // }
-
-
-// make axios call to get musicians
-
 
 
   return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import Client from '../services/api'
-import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,7 +8,6 @@ const NewGig = ({bandleader}) => {
 const navigate = useNavigate()
 const initialState = {venueName: "", location: "", gigType: ""}
 const [formState, setFormState] = useState(initialState)
-// let Id = bandleader.id
 console.log(bandleader.id)
 
   const handleChange = (e) => {
