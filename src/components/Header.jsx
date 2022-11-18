@@ -2,11 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Header = ({authenticated, user, handleLogOut}) => {
-  // const [isClicked, setIsClicked] = useState(false)
-
-  // const handleToggle = () => {
-  //   setIsClicked(!isClicked)
-  // }
 
   return (
     <div className={authenticated ? "nav-div" : "loggedOutNavDiv"}>
