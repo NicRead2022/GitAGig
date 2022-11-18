@@ -1,8 +1,5 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
-import axios from 'axios'
-import Client from '../services/api'
+import { Link } from 'react-router-dom'
 
 const Header = ({authenticated, user, handleLogOut}) => {
   // const [isClicked, setIsClicked] = useState(false)

@@ -1,20 +1,15 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import axios from 'axios'
 import Client from '../services/api'
 import React from 'react'
 import { GigCard } from './GigCard'
 
 const BandleaderHome = ({bandleader, selectedGig, setSelectedGig}) => {
-const navigate = useNavigate()
 const [bandleaderDetails, setBandleaderDetails] = useState()
 const [bandleaderGigs, setBandleaderGigs] = useState([])
 const [deletedGig, toggleDeletedGig] = useState(false) 
-const [currentBandleader, setCurrentBandleader] = useState(bandleader)
 
 let {id}  = useParams()
-// setCurrentBandleader(bandleader)
-
 
 const getDetails = async () => {
   const response = await Client.get(`/api/bandleader/${id}`) 
@@ -32,28 +27,21 @@ const getDetails = async () => {
 }
 
 useEffect(() => {
-
       getDetails()
-
 }, [deletedGig])
-
-
-
-console.log(bandleaderGigs)
-console.log(bandleader)
 
   return (
     <div >
       <div className="bandleader-land">
         <div className='bandleader-info'>
         <h2 className="welcome">Welcome {bandleaderDetails?.name}!</h2>
-        <img className="profile-pic" src={bandleaderDetails?.blImage}></img>
+        <img className="profile-pic" alt="profile-pic" src={bandleaderDetails?.blImage}></img>
         {/* <h5>name: {bandleaderDetails?.name}</h5> */}
         <h5>band name:{bandleaderDetails?.band}</h5>
-        <p>social media: <a href={`https://${bandleaderDetails?.socialMedia}`} target="_blank">{bandleaderDetails?.socialMedia}</a></p>
+        <p>social media: <a href={`https://${bandleaderDetails?.socialMedia}`} rel="noreferrer" target="_blank">{bandleaderDetails?.socialMedia}</a></p>
         </div>
           <div className="gig-list">
-          <Link to='/new-gig'><button className='add-gigbtn' role="button">Add Gig</button></Link>
+          <Link to='/new-gig'><button className='add-gigbtn'>Add Gig</button></Link>
         </div>
           <div className="gigs-div">
           <h4>Your Upcoming Gigs:</h4>
