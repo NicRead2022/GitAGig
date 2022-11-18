@@ -31,7 +31,7 @@ export const RegisterMusician = () => {
 
   return (
     <div className="registrationForm">
-                <h3 className="register-title">Register Musician:</h3>
+                <h4 className="register-title">Add Yourself To Our List:</h4>
     <form className="registrationInputContainer" onSubmit={handleSubmit}>
     <div className='new-musician-input-wrapper'>
           <label className="registration-labels" htmlFor='name'>Name:</label>
