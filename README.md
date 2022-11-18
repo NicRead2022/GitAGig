@@ -19,6 +19,9 @@
 ## Component Hierarchy Diagram
 <img src="https://user-images.githubusercontent.com/107156341/200999440-2e1190f8-fe42-430a-b3aa-4bf68f782e4e.png" width=50% height=50%>
 
+## Register Page
+<img src="https://user-images.githubusercontent.com/107156341/202730161-78752f27-fc79-4ff6-a47a-91d758294cc8.png"
+
 ## Technologies Used
 [Github](https://github.com/)
 [Trello](trello.com)
