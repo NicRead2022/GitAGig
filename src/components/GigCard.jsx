@@ -55,7 +55,6 @@ const handleDeleteMusician = async(e) => {
 }
 
 
-  // key={gigDetails.id}
 console.log(musiciansOnGig)
   return (
     <div>
@@ -69,7 +68,7 @@ console.log(musiciansOnGig)
                     <ul className="musicians-on-gig">
                     <h4>Musicians:</h4>
                     {!musiciansOnGig ? <h6>No Musicians On Gig</h6> : musiciansOnGig.map((musicians, idx) => (
-                      <p className="hired-musician"><b>{musicians.name}</b> <br></br>-{musicians.instrument}-<br></br><button className="delete-musician" id={musicians.id} onClick={handleDeleteMusician}>Delete Musician</button></p>
+                      <p key="musicians.id" className="hired-musician"><b>{musicians.name}</b> <br></br>-{musicians.instrument}-<br></br><button className="delete-musician" id={musicians.id} onClick={handleDeleteMusician}>Delete Musician</button></p>
                       
                     ))}
                     </ul>
