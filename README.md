@@ -1,9 +1,12 @@
-# Git-A-Gig
+# HiredGig
 ## Date Due: November 18,2022
 
 ### By: [Jeremy Harrell](https://www.linkedin.com/in/jeremy-harrell-softwareengineer/)  |     [Jon Scarpelli](https://www.linkedin.com/in/jon-scarpelli/) |    [Nicole Read](https://www.linkedin.com/in/nicole-read22/)
 
 ***
+
+[Deployed App](https://hiredgig.herokuapp.com/)
+
 [Trello Board](https://trello.com/invite/b/gZaHXww6/ATTI32ff4fa0ffa2fd95c4ae6a8269b34d00026D7D25/git-a-gig-pern-app)
 
 [Google Slide Presentation](https://docs.google.com/presentation/d/120T29Fd3J7_0IsQvTcP0-D6LQryP7_WMqAjz56KhhiU/edit?usp=sharing)
@@ -35,7 +38,7 @@
 ***
 
 ## Future Updates
-### Develop a seperate login and profile for musicians.
+### Develop a separate login and profile for musicians.
 
 
 
