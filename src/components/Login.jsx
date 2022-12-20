@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { LoginUser } from '../services/Auth'
 
-const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
+const SignIn = ({ toggleAuthenticated, setBandleader, user }) => {
   const navigate = useNavigate()
   const [formValues, setFormValues] = useState({ email: '', password: '' })
 
@@ -25,7 +25,7 @@ const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
       <div className="login-wrapper">
         <form className="col" onSubmit={handleSubmit}>
           <div>
-            <label className="login-label"htmlFor="email">Email</label>
+            <label className="login-label" htmlFor="email">Email</label>
             <input className="login-inputs"
               onChange={handleChange}
               name="email"
@@ -49,7 +49,16 @@ const SignIn = ({toggleAuthenticated, setBandleader, user}) => {
             Login
           </button>
         </form>
-        
+        <div className="admin">
+          <p>
+            <i>please login with:</i>
+          </p>
+          <h5>
+            admin@admin.com <br />
+            admin
+          </h5>
+        </div>
+
       </div>
       <h6 className="register-musician-text">If you are a musician and want to add yourself to our database please</h6>
       <h6><Link to="/register-musician">CLICK HERE TO GET ON THE LIST</Link></h6>
