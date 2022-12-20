@@ -1,21 +1,21 @@
 #root {
-  height:100vh;
- 
+  height: 100vh;
+
 }
 
 .App {
   text-align: center;
   font-family: "Lexend Zetta";
-  height: 100%; 
-  
+  height: 100%;
+  padding-top: 1vh;
 }
 
-.main{
+.main {
   margin: 0px;
   height: calc(100vh - 178px);
   flex: 1;
   display: auto;
-  justify-content:center ;
+  justify-content: center;
   flex-direction: column;
   background-size: cover;
   border: 5px solid;
@@ -27,16 +27,18 @@
   margin: 2vh 0 0 0;
   padding: 0;
 }
+
 .register-musician-text {
   margin: 19vh 0 0 0;
   padding: 0;
 }
 
-.login-page  {
-  margin-top: 12vh;;
+.login-page {
+  margin-top: 12vh;
+  ;
   display: flex;
   height: 80%;
-  justify-content:flex-start;
+  justify-content: flex-start;
   flex-direction: column;
 }
 
@@ -46,12 +48,13 @@
 }
 
 .login-label {
-display: grid;
-justify-content: center;
-flex-direction: column;
+  display: grid;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.login-inputs, .registration-inputs {
+.login-inputs,
+.registration-inputs {
   justify-content: center;
   flex-direction: column;
   width: 30vw;
@@ -62,7 +65,7 @@ flex-direction: column;
 .loggedInMain {
   flex: 1;
   display: auto;
-  justify-content:center ;
+  justify-content: center;
   flex-direction: column;
   background-color: #d3d3d3;
   border: 5px solid;
@@ -74,7 +77,7 @@ flex-direction: column;
   opacity: .5;
 }
 
-.loggedOutMain::before{
+.loggedOutMain::before {
   content: "";
   background-image: url("https://cathouse.co.uk/wp-content/uploads/2019/05/crowd-bw.jpg");
   background-size: cover;
@@ -93,7 +96,7 @@ flex-direction: column;
   height: calc(100vh - 178px);
   flex: 1;
   display: auto;
-  justify-content:center ;
+  justify-content: center;
   flex-direction: column;
   background-size: cover;
   border: 5px solid;
@@ -104,67 +107,68 @@ flex-direction: column;
 
 .front-pic {
   width: 100vw;
-  
+
 }
 
 /* Login */
 
 .logged-in-color {
-  color:#8d8d8d
+  color: #8d8d8d
 }
 
 .logged-out-color {
-  color:#9a9a9a
+  color: #9a9a9a
 }
 
 .login-btn {
   appearance: none;
-    background-color: #000000;
-    border: 2px solid #1A1A1A;
-    border-radius: 15px;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 1vh;
-    min-height: 7vh;
-    min-width: 25vw;
-    outline: none;
-    padding: 2vw, 2vh;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 20%;
-    will-change: transform;
-  }
-  a{
-    text-decoration: none;
-    color: black;
-  }
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 1vh;
+  min-height: 7vh;
+  min-width: 25vw;
+  outline: none;
+  padding: 2vw, 2vh;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 20%;
+  will-change: transform;
+}
 
-  a:hover {
-    color: rgb((192, 191, 191)88, 179, 179);
-  }
-  
-  .login-btn:disabled {
-    pointer-events: none;
-  }
-  
-  .login-btn:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .login-btnn:active {
-    box-shadow: none;
-    transform: translateY(0);
-  } 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: rgb((192, 191, 191)88, 179, 179);
+}
+
+.login-btn:disabled {
+  pointer-events: none;
+}
+
+.login-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.login-btnn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
 
 
 
@@ -172,43 +176,47 @@ flex-direction: column;
 
 .registrationInputWrapper {
   margin: 2px;
-  
+
 }
-label,input{
-  display:flex;
-  flex-direction:column;
+
+label,
+input {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  width:calc(100vw - 200px);
+  width: calc(100vw - 200px);
   margin-left: auto;
   margin-right: auto;
   font-size: larger;
   font-weight: 700;
 }
+
 .registrationFormTitle {
-  margin: 0 0 .5vh 0;
+  margin: 90px 0 .5vh 0;
 }
 
 
 .registrationForm {
   flex: 1;
   display: flex;
-  justify-content:center ;
+  justify-content: center;
   flex-direction: column;
   background-size: auto;
-  height:100vh
+  height: 100vh
 }
 
 .registration-labels {
   font-size: 14px;
   color: rgb(0, 0, 0);
 }
+
 .registrationInputContainer {
   height: 100vh;
   display: flex;
   flex-direction: column;
   font-size: 12px;
 
-  
+
 }
 
 
@@ -217,7 +225,7 @@ label,input{
 .nav-div {
   background-color: rgb(251, 248, 252);
   border: 2px solid;
-  height:140px;
+  height: 140px;
   border-bottom: 0px;
   background-image: url("https://cathouse.co.uk/wp-content/uploads/2019/05/crowd-bw.jpg");
 }
@@ -244,83 +252,89 @@ label,input{
 }
 
 .registerButton {
-  align-self:center;
+  align-self: center;
 }
 
-.add-gigbtn, .registerButton, .updategig, .gigDelete,  .gigcard-add-musician-btn,  .add-musician-btn,  .add-gig-info-btn  {
-    appearance: none;
-    background-color: #000000;
-    border: 2px solid #1A1A1A;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 12px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 4px 4px;
-    min-height: 30px;
-    min-width: 28vw;
-    outline: none;
-    padding: 1vh 1vw;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 20%;
-    will-change: transform;
-  }
-  
-  .add-gigbtn:disabled {
-    pointer-events: none;
-  }
-  
-  .add-gigbtn:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .add-gigbtn:active {
-    box-shadow: none;
-    transform: translateY(0);
-  } 
+.add-gigbtn,
+.registerButton,
+.updategig,
+.gigDelete,
+.gigcard-add-musician-btn,
+.add-musician-btn,
+.add-gig-info-btn {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 4px 4px;
+  min-height: 30px;
+  min-width: 28vw;
+  outline: none;
+  padding: 1vh 1vw;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 20%;
+  will-change: transform;
+}
 
-  .updategig:disabled {
-    pointer-events: none;
-  }
-  
-  .updategig:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .updategig:active {
-    box-shadow: none;
-    transform: translateY(0);
-  } 
+.add-gigbtn:disabled {
+  pointer-events: none;
+}
+
+.add-gigbtn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.add-gigbtn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.updategig:disabled {
+  pointer-events: none;
+}
+
+.updategig:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.updategig:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
 
 
-  /* NewGig */
+/* NewGig */
 
-  .add-gig-info-btn:disabled {
-    pointer-events: none;
-  }
-  
-  .add-gig-info-btn:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .add-gig-info-btnn:active {
-    box-shadow: none;
-    transform: translateY(0);
-  } 
+.add-gig-info-btn:disabled {
+  pointer-events: none;
+}
 
-  /* Musicians */
+.add-gig-info-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.add-gig-info-btnn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* Musicians */
 
 .musicians {
   margin: 1vh 2vw;
@@ -334,79 +348,80 @@ label,input{
   border: 1px solid black;
   border-radius: 3px;
 }
-  .add-musician-btnn:disabled {
-    pointer-events: none;
-  }
-  
-  .add-musician-btnbtn:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .add-musician-btn:active {
-    box-shadow: none;
-    transform: translateY(0);
-  } 
-  
-  /* GigCard */
+
+.add-musician-btnn:disabled {
+  pointer-events: none;
+}
+
+.add-musician-btnbtn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.add-musician-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* GigCard */
 
 .gig-card {
   margin: 1vh 2vw;
   border-top: 1px solid black;
 }
 
-  ul {
-    margin: 2vh 0 0 0;
-    padding: 0;
-  }
+ul {
+  margin: 2vh 0 0 0;
+  padding: 0;
+}
 
-  li {
-    list-style:none;
-    font-size: 10px;
-  }
+li {
+  list-style: none;
+  font-size: 10px;
+}
 
-  .delete-musician {
-    align-self: center;
-    appearance: none;
-    background-color: #e30000;
-    border: 2px solid #1A1A1A;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 12px;
-    font-weight: 600;
-    margin: 4px 4px;
-    height: 24px;
-    min-height: 22px;
-    min-width: 20vw;
-    outline: none;
-    padding: .4vh 1vw;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    will-change: transform;
-  }
+.delete-musician {
+  align-self: center;
+  appearance: none;
+  background-color: #e30000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 12px;
+  font-weight: 600;
+  margin: 4px 4px;
+  height: 24px;
+  min-height: 22px;
+  min-width: 20vw;
+  outline: none;
+  padding: .4vh 1vw;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
 
 
-  .gigDelete:disabled {
-    pointer-events: none;
-  }
-  
-  .gigDelete:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .gigDelete:active {
-    box-shadow: none;
-    transform: translateY(0);
-  } 
+.gigDelete:disabled {
+  pointer-events: none;
+}
+
+.gigDelete:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.gigDelete:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
 
 p {
   font-size: 13px;
@@ -418,23 +433,22 @@ p {
   font-size: 12px;
 }
 
-.musicians-on-gig{
+.musicians-on-gig {
   margin-bottom: 2vh;
   text-align: center;
 }
 
 
-  .gigcard-add-musician-btn:disabled {
-    pointer-events: none;
-  }
-  
-  .gigcard-add-musician-btn:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .gigcard-add-musician-btn:active {
-    box-shadow: none;
-    transform: translateY(0);
-  } 
+.gigcard-add-musician-btn:disabled {
+  pointer-events: none;
+}
 
+.gigcard-add-musician-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.gigcard-add-musician-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
