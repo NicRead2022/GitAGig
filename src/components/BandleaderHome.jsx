@@ -45,9 +45,9 @@ const BandleaderHome = ({
             alt="profile-pic"
             src={bandleaderDetails?.blImage}
           ></img>
-          <h5>band name:{bandleaderDetails?.band}</h5>
-          <h6>
-            social media:{' '}
+          <h3>Band Name: {bandleaderDetails?.band}</h3>
+          <h4>
+            Social Media:{' '}
             <a
               href={`https://${bandleaderDetails?.socialMedia}`}
               rel="noreferrer"
@@ -55,7 +55,7 @@ const BandleaderHome = ({
             >
               {bandleaderDetails?.socialMedia}
             </a>
-          </h6>
+          </h4>
         </div>
         <div className="gig-list">
           <Link to="/new-gig">
@@ -63,7 +63,7 @@ const BandleaderHome = ({
           </Link>
         </div>
         <div className="gigs-div">
-          <h4>Your Upcoming Gigs:</h4>
+          <h2 className="gig-list-header">Your Upcoming Gigs</h2>
           {!bandleaderGigs ? (
             <h5>No Upcoming Gigs</h5>
           ) : (

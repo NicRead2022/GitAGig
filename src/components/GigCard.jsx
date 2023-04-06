@@ -71,8 +71,8 @@ export const GigCard = ({
             <p className="gig-list-type">
               <b>{gigDetails[0].date}</b> @ {gigDetails[0].time}pm
             </p>
-            <p className="gig-list-location">
-              <b>located at:</b> {gigDetails[0].location}
+            <p className="gig-list-type gig-list-location">
+              <b>located at: </b> {gigDetails[0].location}
             </p>
             <p className="gig-list-type">
               <b>type of gig:</b> {gigDetails[0].gigType}

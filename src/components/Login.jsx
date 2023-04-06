@@ -25,8 +25,11 @@ const SignIn = ({ toggleAuthenticated, setBandleader, user }) => {
       <div className="login-wrapper">
         <form className="col" onSubmit={handleSubmit}>
           <div>
-            <label className="login-label" htmlFor="email">Email</label>
-            <input className="login-inputs"
+            <label className="login-label" htmlFor="email">
+              Email
+            </label>
+            <input
+              className="login-inputs"
               onChange={handleChange}
               name="email"
               type="email"
@@ -35,9 +38,12 @@ const SignIn = ({ toggleAuthenticated, setBandleader, user }) => {
               required
             />
           </div>
-          <div >
-            <label className="login-label" htmlFor="password">Password</label>
-            <input className="login-inputs"
+          <div>
+            <label className="login-label" htmlFor="password">
+              Password
+            </label>
+            <input
+              className="login-inputs"
               onChange={handleChange}
               type="password"
               name="password"
@@ -45,23 +51,29 @@ const SignIn = ({ toggleAuthenticated, setBandleader, user }) => {
               required
             />
           </div>
-          <button className='login-btn' disabled={!formValues.email || !formValues.password}>
+          <button
+            className="login-btn"
+            disabled={!formValues.email || !formValues.password}
+          >
             Login
           </button>
         </form>
         <div className="admin">
-          <p>
+          <h4>
             <i>please login with:</i>
-          </p>
+          </h4>
           <h5>
             admin@admin.com <br />
             admin
           </h5>
         </div>
-
       </div>
-      <h6 className="register-musician-text">If you are a musician and want to add yourself to our database please</h6>
-      <h6><Link to="/register-musician">CLICK HERE TO GET ON THE LIST</Link></h6>
+      <h6 className="register-musician-text">
+        If you are a musician and want to add yourself to our database please
+      </h6>
+      <h6>
+        <Link to="/register-musician">CLICK HERE TO GET ON THE LIST</Link>
+      </h6>
     </div>
   )
 }
