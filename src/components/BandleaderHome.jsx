@@ -12,7 +12,7 @@ const [deletedGig, toggleDeletedGig] = useState(false)
 let {id}  = useParams()
 
 const getDetails = async () => {
-  const response = await Client.get(`/api/bandleader/${id}`) 
+  const response = await Client.get(`https://hired-serverside.herokuapp.com/api/bandleader/${id}`) 
   setBandleaderDetails(response.data[0])
   let data = response.data
   let bandGigs = []
