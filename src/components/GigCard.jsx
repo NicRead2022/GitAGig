@@ -48,7 +48,7 @@ const handleUpdateClick = (e) => {
 const handleDeleteMusician = async(e) => {
   let musicianId= e.target.id
   let deletedGig = {gigId: null}
-  await axios.put(`https://gitagig.herokuapp.com/api/musician/${musicianId}`, deletedGig )
+  await axios.put(`https://hired-serverside.herokuapp.com/api/musician/${musicianId}`, deletedGig )
   setMusiciansOnGig(null)
   toggleDeletedMusician(!deletedMusician)
 }
@@ -66,7 +66,7 @@ const handleDeleteMusician = async(e) => {
                     <ul className="musicians-on-gig">
                     <h4>Musicians:</h4>
                     {!musiciansOnGig ? <h6>No Musicians On Gig</h6> : musiciansOnGig.map((musicians, idx) => (
-                     <p> <Link to={`/musician/${idx}`}  key="musicians.id" className="hired-musician"><b>{musicians.name}</b> <br></br>-{musicians.instrument}-<br></br></Link><button className="delete-musician" id={musicians.id} onClick={handleDeleteMusician}>Delete Musician</button></p>
+                     <p> <Link to={`/musician/${idx}`}  key={musicians.id} className="hired-musician"><b>{musicians.name}</b> <br></br>-{musicians.instrument}-<br></br></Link><button className="delete-musician" id={musicians.id} onClick={handleDeleteMusician}>Delete Musician</button></p>
                     ))}
                     </ul>
                     <button id={gigId} onClick={handleClick} className='gigcard-add-musician-btn' >Add Musicians</button></div> 
