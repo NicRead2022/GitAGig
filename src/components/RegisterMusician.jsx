@@ -10,7 +10,7 @@ export const RegisterMusician = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post(`api/musician/`, formState)
+    await axios.post(`/api/musician/`, formState)
     setFormState(initialState);
     navigate('/')
   }
