@@ -1,6 +1,6 @@
 import Axios from 'axios'
 
-// export const BASE_URL = 'https://gitagig.herokuapp.com'
+
 export const BASE_URL = 'https://hired-serverside.herokuapp.com/'
 
 const Client = Axios.create({ baseURL: BASE_URL })

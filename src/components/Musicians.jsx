@@ -12,7 +12,7 @@ const Musicians = ({ selectedGig, bandleader }) => {
   const [musicians, setMusicians] = useState([])
 
   const getMusicians = async () => {
-    const res = await axios.get(`https://hired-serverside.herokuapp.com/api/musician`)
+    const res = await axios.get(`api/musician`)
     setMusicians(res.data)
   }
 
@@ -24,7 +24,7 @@ const Musicians = ({ selectedGig, bandleader }) => {
   const handleClick = async (e) => {
     let musicianId = e.target.id
     let addedGig = { gigId: selectedGig }
-    await axios.put(`https://hired-serverside.herokuapp.com/api/musician/${musicianId}`, addedGig)
+    await axios.put(`api/musician/${musicianId}`, addedGig)
     navigate(`/bandleader/${bandleader.id}`)
   }
 
